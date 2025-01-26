@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjmsqj0xkjmlr"]
+
+[ext_resource type="PackedScene" uid="uid://dg6au48p0go8r" path="res://scenes/ducky.tscn" id="1_vvde1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_17pwi"]
+distance = -63.0
+
+[node name="level_1" type="Node"]
+
+[node name="ducky" parent="." instance=ExtResource("1_vvde1")]
+position = Vector2(30, 22)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(32, 28)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_17pwi")
