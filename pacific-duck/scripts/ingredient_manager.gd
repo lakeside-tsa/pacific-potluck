@@ -4,9 +4,12 @@ var ing1 = 0
 var ing2 = 0
 var ing3 = 0
 
+@onready var ing_counter = $IngCounter
+
 func add_ing1():
 	ing1 += 1
 	print(ing1)
+
 
 func add_ing2():
 	ing2 += 1
