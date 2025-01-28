@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://c4vccsaskxygi"]
 
-[ext_resource type="Script" path="res://scripts/apple.gd" id="1_16xjo"]
 [ext_resource type="Texture2D" uid="uid://caaap8sxtiavq" path="res://assets/Items/Fruits/Apple.png" id="1_brxsk"]
+[ext_resource type="Script" path="res://scripts/ingredient_1.gd" id="1_w7dp2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iebdv"]
 atlas = ExtResource("1_brxsk")
@@ -135,7 +135,7 @@ radius = 8.0
 
 [node name="Apple" type="Area2D"]
 collision_mask = 2
-script = ExtResource("1_16xjo")
+script = ExtResource("1_w7dp2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ydtyn")
