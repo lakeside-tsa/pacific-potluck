@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=4 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=12 format=4 uid="uid://bjmsqj0xkjmlr"]
 
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
 [ext_resource type="PackedScene" uid="uid://dg6au48p0go8r" path="res://scenes/ducky.tscn" id="1_vvde1"]
 [ext_resource type="Texture2D" uid="uid://c75n23uammgw8" path="res://assets/Terrain/Terrain (16x16).png" id="2_08e0m"]
@@ -189,6 +190,7 @@ normal = Vector2(1, 0)
 distance = -244.0
 
 [node name="level_1" type="Node"]
+script = ExtResource("1_kd0sr")
 
 [node name="ducky" parent="." instance=ExtResource("1_vvde1")]
 position = Vector2(30, 22)
