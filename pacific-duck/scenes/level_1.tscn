@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=14 format=4 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/apple.tscn" id="3_ahxml"]
 [ext_resource type="Script" path="res://scripts/ingredient_2.gd" id="5_72ap3"]
 [ext_resource type="Script" path="res://scripts/ingredient_3.gd" id="5_lsdon"]
+[ext_resource type="Script" path="res://scripts/cauldron_manager.gd" id="7_bs8qq"]
+[ext_resource type="PackedScene" uid="uid://cxcqt2oa42ms3" path="res://scenes/cauldron.tscn" id="8_hr6tt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c3rs8"]
 texture = ExtResource("2_08e0m")
@@ -193,7 +195,7 @@ distance = -244.0
 script = ExtResource("1_kd0sr")
 
 [node name="ducky" parent="." instance=ExtResource("1_vvde1")]
-position = Vector2(30, 22)
+position = Vector2(-45, 0)
 
 [node name="IngredientManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -218,6 +220,14 @@ script = ExtResource("5_lsdon")
 [node name="Apple_ing2" parent="Ingredients" instance=ExtResource("3_ahxml")]
 position = Vector2(-151, 8)
 script = ExtResource("5_72ap3")
+
+[node name="CauldronManager" type="Node" parent="."]
+script = ExtResource("7_bs8qq")
+
+[node name="Cauldron" parent="." instance=ExtResource("8_hr6tt")]
+position = Vector2(-175, -23)
+scale = Vector2(0.4, 0.4)
+collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(30, 30)
