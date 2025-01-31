@@ -413,15 +413,44 @@ position = Vector2(75, 30)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="ducky/Camera2D"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ducky/Camera2D/ParallaxBackground"]
+motion_scale = Vector2(1.4, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ducky/Camera2D/ParallaxBackground/ParallaxLayer"]
+z_index = -10
+position = Vector2(-571, -330)
+scale = Vector2(2, 2)
+texture = ExtResource("3_entd8")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ducky/Camera2D/ParallaxBackground"]
+motion_scale = Vector2(1.1, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ducky/Camera2D/ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(2, 2)
+texture = ExtResource("4_57s07")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ducky/Camera2D/ParallaxBackground"]
+motion_scale = Vector2(1.1, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ducky/Camera2D/ParallaxBackground/ParallaxLayer3"]
+scale = Vector2(2, 2)
+texture = ExtResource("5_rbtnm")
+
 [node name="IngredientManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_sy0kq")
 
 [node name="IngCounter" type="Label" parent="IngredientManager"]
-offset_left = -247.0
-offset_top = -138.0
-offset_right = 46.0
-offset_bottom = -108.0
+offset_left = -31.0
+offset_top = -59.0
+offset_right = 262.0
+offset_bottom = -29.0
 text = "Desu"
 
 [node name="Ingredients" type="Node" parent="."]
@@ -458,29 +487,3 @@ shape = SubResource("WorldBoundaryShape2D_kxgbd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries"]
 shape = SubResource("WorldBoundaryShape2D_jd2xw")
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(1.5, 1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-scale = Vector2(2, 2)
-texture = ExtResource("3_entd8")
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(1.1, 1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-scale = Vector2(2, 2)
-texture = ExtResource("4_57s07")
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(1.1, 1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-scale = Vector2(2, 2)
-texture = ExtResource("5_rbtnm")
