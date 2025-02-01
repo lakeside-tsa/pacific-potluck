@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bnfrv3sc6bmxb" path="res://assets/Ocean/Ocean_2/4.png" id="5_rbtnm"]
 [ext_resource type="Script" path="res://scripts/cauldron_manager.gd" id="7_bs8qq"]
 [ext_resource type="PackedScene" uid="uid://cxcqt2oa42ms3" path="res://scenes/cauldron.tscn" id="8_hr6tt"]
-[ext_resource type="Texture2D" uid="uid://kfehget176ra" path="res://assets/Berie/PNG/tilemap.png" id="10_v0ip8"]
+[ext_resource type="Texture2D" uid="uid://ckur2crembpj2" path="res://assets/Berie/PNG/tilemap.png" id="10_v0ip8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3kxm"]
 texture = ExtResource("10_v0ip8")
