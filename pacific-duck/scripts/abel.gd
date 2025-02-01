@@ -12,12 +12,12 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.animation = "run"
 	else:
 		animated_sprite_2d.animation = "idle"
-		
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		animated_sprite_2d.animation = "jump"
-	
+
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

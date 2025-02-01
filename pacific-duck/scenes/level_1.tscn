@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=4 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=16 format=4 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
-[ext_resource type="PackedScene" uid="uid://dg6au48p0go8r" path="res://scenes/ducky.tscn" id="1_vvde1"]
+[ext_resource type="PackedScene" uid="uid://dg6au48p0go8r" path="res://scenes/oscar.tscn" id="1_vvde1"]
 [ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/apple.tscn" id="3_ahxml"]
+[ext_resource type="PackedScene" uid="uid://c1dcvvatq2svn" path="res://scenes/abel.tscn" id="3_emmtj"]
 [ext_resource type="Texture2D" uid="uid://bk1cfabpfwx1h" path="res://assets/Ocean/Ocean_2/2.png" id="3_entd8"]
 [ext_resource type="Texture2D" uid="uid://0kas8fn7ipef" path="res://assets/Ocean/Ocean_2/3.png" id="4_57s07"]
 [ext_resource type="Texture2D" uid="uid://bnfrv3sc6bmxb" path="res://assets/Ocean/Ocean_2/4.png" id="5_rbtnm"]
@@ -405,42 +406,10 @@ distance = -244.0
 [node name="level_1" type="Node"]
 script = ExtResource("1_kd0sr")
 
-[node name="ducky" parent="." instance=ExtResource("1_vvde1")]
+[node name="Oscar" parent="." instance=ExtResource("1_vvde1")]
 position = Vector2(-76, -32)
 
-[node name="Camera2D" type="Camera2D" parent="ducky"]
-position = Vector2(75, 30)
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="ducky/Camera2D"]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ducky/Camera2D/ParallaxBackground"]
-motion_scale = Vector2(1.4, 1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ducky/Camera2D/ParallaxBackground/ParallaxLayer"]
-z_index = -10
-position = Vector2(-571, -330)
-scale = Vector2(2, 2)
-texture = ExtResource("3_entd8")
-centered = false
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ducky/Camera2D/ParallaxBackground"]
-motion_scale = Vector2(1.1, 1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ducky/Camera2D/ParallaxBackground/ParallaxLayer2"]
-scale = Vector2(2, 2)
-texture = ExtResource("4_57s07")
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ducky/Camera2D/ParallaxBackground"]
-motion_scale = Vector2(1.1, 1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ducky/Camera2D/ParallaxBackground/ParallaxLayer3"]
-scale = Vector2(2, 2)
-texture = ExtResource("5_rbtnm")
+[node name="Abel" parent="." instance=ExtResource("3_emmtj")]
 
 [node name="IngredientManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -487,3 +456,38 @@ shape = SubResource("WorldBoundaryShape2D_kxgbd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries"]
 shape = SubResource("WorldBoundaryShape2D_jd2xw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+position = Vector2(-1, -2)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Camera2D"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+motion_scale = Vector2(1.4, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
+z_index = -10
+position = Vector2(-571, -330)
+scale = Vector2(2, 2)
+texture = ExtResource("3_entd8")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+motion_scale = Vector2(1.1, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(2, 2)
+texture = ExtResource("4_57s07")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+motion_scale = Vector2(1.1, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/ParallaxBackground/ParallaxLayer3"]
+scale = Vector2(2, 2)
+texture = ExtResource("5_rbtnm")
