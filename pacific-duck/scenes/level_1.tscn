@@ -1,11 +1,8 @@
-[gd_scene load_steps=14 format=4 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=11 format=4 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
 [ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/apple.tscn" id="3_ahxml"]
-[ext_resource type="Texture2D" uid="uid://bk1cfabpfwx1h" path="res://assets/Ocean/Ocean_2/2.png" id="3_entd8"]
-[ext_resource type="Texture2D" uid="uid://0kas8fn7ipef" path="res://assets/Ocean/Ocean_2/3.png" id="4_57s07"]
-[ext_resource type="Texture2D" uid="uid://bnfrv3sc6bmxb" path="res://assets/Ocean/Ocean_2/4.png" id="5_rbtnm"]
 [ext_resource type="Script" path="res://scripts/cauldron_manager.gd" id="7_bs8qq"]
 [ext_resource type="PackedScene" uid="uid://cxcqt2oa42ms3" path="res://scenes/cauldron.tscn" id="8_hr6tt"]
 [ext_resource type="Texture2D" uid="uid://ckur2crembpj2" path="res://assets/Berie/PNG/tilemap.png" id="10_v0ip8"]
@@ -449,37 +446,6 @@ shape = SubResource("WorldBoundaryShape2D_kxgbd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries"]
 shape = SubResource("WorldBoundaryShape2D_jd2xw")
-
-[node name="Parallax" type="Node" parent="."]
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="Parallax"]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
-motion_scale = Vector2(1.4, 1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax/ParallaxBackground/ParallaxLayer"]
-z_index = -10
-position = Vector2(-571, -330)
-scale = Vector2(2, 2)
-texture = ExtResource("3_entd8")
-centered = false
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
-motion_scale = Vector2(1.1, 1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax/ParallaxBackground/ParallaxLayer2"]
-scale = Vector2(2, 2)
-texture = ExtResource("4_57s07")
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="Parallax/ParallaxBackground"]
-motion_scale = Vector2(1.1, 1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax/ParallaxBackground/ParallaxLayer3"]
-scale = Vector2(2, 2)
-texture = ExtResource("5_rbtnm")
 
 [node name="SpawnPoint1" type="Marker2D" parent="."]
 visible = false

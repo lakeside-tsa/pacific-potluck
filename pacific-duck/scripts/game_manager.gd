@@ -1,5 +1,6 @@
 extends Node
 
+@warning_ignore("unused_signal")
 signal level_loaded(level, spawn_point1, spawn_point2)
 
 var current_level_number = 0
