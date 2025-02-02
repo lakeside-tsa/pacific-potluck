@@ -356,6 +356,3 @@ autoplay = "idle"
 texture_filter = 1
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_udd6e")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
