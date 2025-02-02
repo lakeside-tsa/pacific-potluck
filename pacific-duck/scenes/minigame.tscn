@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cewaah215cyps"]
+
+[ext_resource type="Texture2D" uid="uid://ccx8c4viomrat" path="res://assets/timing-bar.png" id="1_jtskx"]
+[ext_resource type="Script" path="res://scripts/minigame.gd" id="1_rkd12"]
+[ext_resource type="Texture2D" uid="uid://clfq4syn3qfpk" path="res://assets/arrow.png" id="2_th6so"]
+[ext_resource type="Script" path="res://scripts/arrow.gd" id="3_67spw"]
+
+[sub_resource type="Curve2D" id="Curve2D_5h7gb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -34, -7, 0, 0, 0, 0, 35, -7)
+}
+point_count = 2
+
+[node name="Minigame" type="Node2D"]
+script = ExtResource("1_rkd12")
+
+[node name="Bar" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2)
+texture = ExtResource("1_jtskx")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_5h7gb")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-34, -7)
+script = ExtResource("3_67spw")
+
+[node name="Arrow" type="Sprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-8, -15)
+texture = ExtResource("2_th6so")
+centered = false

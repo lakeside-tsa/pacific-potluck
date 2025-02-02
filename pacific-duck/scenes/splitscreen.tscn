@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgbyrfskejfog"]
+[gd_scene load_steps=6 format=3 uid="uid://cgbyrfskejfog"]
 
 [ext_resource type="Script" path="res://scripts/splitscreen.gd" id="1_e0shh"]
 [ext_resource type="Script" path="res://scripts/camera_1.gd" id="1_ol4fa"]
+[ext_resource type="PackedScene" uid="uid://kie4nqpd832t" path="res://scenes/parallax_background.tscn" id="3_uelyn"]
 [ext_resource type="Script" path="res://scripts/camera_2.gd" id="4_1x333"]
 [ext_resource type="PackedScene" uid="uid://dj8kitg0fqqeg" path="res://scenes/game_manager.tscn" id="7_xm8t0"]
 
@@ -32,6 +33,8 @@ limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("1_ol4fa")
 
+[node name="Parallax" parent="HBoxContainer/SubViewportContainer1/SubViewport" instance=ExtResource("3_uelyn")]
+
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -46,5 +49,7 @@ render_target_update_mode = 4
 limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("4_1x333")
+
+[node name="Parallax" parent="HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("3_uelyn")]
 
 [node name="GameManager" parent="." instance=ExtResource("7_xm8t0")]

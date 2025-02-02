@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=12 format=4 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
 [ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/apple.tscn" id="3_ahxml"]
 [ext_resource type="Script" path="res://scripts/cauldron_manager.gd" id="7_bs8qq"]
+[ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/minigame.tscn" id="7_rubto"]
 [ext_resource type="PackedScene" uid="uid://cxcqt2oa42ms3" path="res://scenes/cauldron.tscn" id="8_hr6tt"]
 [ext_resource type="Texture2D" uid="uid://ckur2crembpj2" path="res://assets/Berie/PNG/tilemap.png" id="10_v0ip8"]
 
@@ -455,3 +456,6 @@ position = Vector2(136, 35)
 [node name="SpawnPoint2" type="Marker2D" parent="."]
 visible = false
 position = Vector2(333, 55)
+
+[node name="Minigame bar" parent="." instance=ExtResource("7_rubto")]
+position = Vector2(295, 469)
