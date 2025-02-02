@@ -41,8 +41,8 @@ func _on_level_loaded(level: Node, spawn_point1: Vector2, spawn_point2: Vector2)
 	viewport2.add_child(level_clone)
 	
 	# Instance and add players
-	player1 = preload("res://scenes/oscar.tscn").instantiate()
-	player2 = preload("res://scenes/abel.tscn").instantiate()
+	player1 = preload("res://scenes/player1_oscar.tscn").instantiate()
+	player2 = preload("res://scenes/player2_abel.tscn").instantiate()
 	current_level.add_child(player1)
 	current_level.add_child(player2)
 	

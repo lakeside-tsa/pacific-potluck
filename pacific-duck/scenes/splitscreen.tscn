@@ -1,10 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgbyrfskejfog"]
+[gd_scene load_steps=5 format=3 uid="uid://cgbyrfskejfog"]
 
 [ext_resource type="Script" path="res://scripts/splitscreen.gd" id="1_e0shh"]
 [ext_resource type="Script" path="res://scripts/camera_1.gd" id="1_ol4fa"]
 [ext_resource type="Script" path="res://scripts/camera_2.gd" id="4_1x333"]
-[ext_resource type="PackedScene" uid="uid://dg6au48p0go8r" path="res://scenes/oscar.tscn" id="4_4w1a7"]
-[ext_resource type="PackedScene" uid="uid://c1dcvvatq2svn" path="res://scenes/abel.tscn" id="7_42wro"]
 [ext_resource type="PackedScene" uid="uid://dj8kitg0fqqeg" path="res://scenes/game_manager.tscn" id="7_xm8t0"]
 
 [node name="Splitscreen" type="Node2D"]
@@ -26,7 +24,7 @@ size_flags_vertical = 3
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer1"]
 handle_input_locally = false
-size = Vector2i(0, 0)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="Camera1" type="Camera2D" parent="HBoxContainer/SubViewportContainer1/SubViewport"]
@@ -41,18 +39,12 @@ size_flags_vertical = 3
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
 handle_input_locally = false
-size = Vector2i(0, 0)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="Camera2" type="Camera2D" parent="HBoxContainer/SubViewportContainer2/SubViewport"]
 limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("4_1x333")
-
-[node name="Oscar" parent="." instance=ExtResource("4_4w1a7")]
-visible = false
-
-[node name="Abel" parent="." instance=ExtResource("7_42wro")]
-visible = false
 
 [node name="GameManager" parent="." instance=ExtResource("7_xm8t0")]
