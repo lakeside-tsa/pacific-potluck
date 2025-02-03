@@ -27,12 +27,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/HBoxContainer/SubViewportContainer1"]
+[node name="SubViewport1" type="SubViewport" parent="CanvasLayer/HBoxContainer/SubViewportContainer1"]
 handle_input_locally = false
 size = Vector2i(900, 900)
 render_target_update_mode = 4
 
-[node name="Camera1" type="Camera2D" parent="CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport"]
+[node name="Camera1" type="Camera2D" parent="CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport1"]
 zoom = Vector2(1.4, 1.4)
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -44,12 +44,12 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/HBoxContainer/SubViewportContainer2"]
+[node name="SubViewport2" type="SubViewport" parent="CanvasLayer/HBoxContainer/SubViewportContainer2"]
 handle_input_locally = false
 size = Vector2i(900, 900)
 render_target_update_mode = 4
 
-[node name="Camera2" type="Camera2D" parent="CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport"]
+[node name="Camera2" type="Camera2D" parent="CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport2"]
 zoom = Vector2(1.4, 1.4)
 limit_smoothed = true
 position_smoothing_enabled = true

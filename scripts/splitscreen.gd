@@ -4,9 +4,10 @@ var current_level: Node
 var player1: Node
 var player2: Node
 
+@onready var viewport1 = $CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport1
+@onready var viewport2 = $CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport2
+
 func _ready():
-	var viewport1 = $CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport
-	var viewport2 = $CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport
 
 	viewport2.world_2d = viewport1.world_2d
 
@@ -19,24 +20,23 @@ func _ready():
 
 	game_manager.connect("level_loaded", Callable(self, "_on_level_loaded"))
 	game_manager.load_level(1)
-	print("Viewport1 size: ", $CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport.size)
-	print("Viewport2 size: ", $CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport.size)
+	print("Viewport1 size: ", viewport1.size)
+	print("Viewport2 size: ", viewport2.size)
 	print("ready done")
 
 func _on_level_loaded(level: Node, spawn_point1: Vector2, spawn_point2: Vector2):
-	var viewport1 = $CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport
-	var viewport2 = $CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport
+
 	print("on_level_loaded started")
 
-
-	# Remove previous level if exists
+	# Remove previous level if it exists
 	if current_level:
 		current_level.queue_free()
 	
 	current_level = level
 	viewport1.add_child(current_level)
-	var level_clone = current_level.duplicate()
-	viewport2.add_child(level_clone)
+	# 問題
+	#var level_clone = current_level.duplicate()
+	#viewport2.add_child(level_clone)
 	
 	# Instance and add players
 	player1 = preload("res://scenes/player1_oscar.tscn").instantiate()
@@ -56,6 +56,4 @@ func _on_level_loaded(level: Node, spawn_point1: Vector2, spawn_point2: Vector2)
 
 func _on_window_resized():
 	var window_size = get_viewport().size
-	var viewport1 = $CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport
-	var viewport2 = $CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport
 	print("Viewport sizes updated: ", viewport1.size)
