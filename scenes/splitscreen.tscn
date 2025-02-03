@@ -9,47 +9,52 @@
 [node name="Splitscreen" type="Node2D"]
 script = ExtResource("1_e0shh")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(1200, 800)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1200.0
+offset_bottom = 800.0
+size_flags_horizontal = 3
 
-[node name="SubViewportContainer1" type="SubViewportContainer" parent="HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+custom_minimum_size = Vector2(1200, 800)
+layout_mode = 1
+offset_right = 1204.0
+offset_bottom = 800.0
+
+[node name="SubViewportContainer1" type="SubViewportContainer" parent="Control/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer1"]
+[node name="SubViewport" type="SubViewport" parent="Control/HBoxContainer/SubViewportContainer1"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(600, 800)
 render_target_update_mode = 4
 
-[node name="Camera1" type="Camera2D" parent="HBoxContainer/SubViewportContainer1/SubViewport"]
+[node name="Camera1" type="Camera2D" parent="Control/HBoxContainer/SubViewportContainer1/SubViewport"]
 limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("1_ol4fa")
 
-[node name="Parallax" parent="HBoxContainer/SubViewportContainer1/SubViewport" instance=ExtResource("3_uelyn")]
+[node name="Parallax" parent="Control/HBoxContainer/SubViewportContainer1/SubViewport" instance=ExtResource("3_uelyn")]
 
-[node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="Control/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
+[node name="SubViewport" type="SubViewport" parent="Control/HBoxContainer/SubViewportContainer2"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(600, 800)
 render_target_update_mode = 4
 
-[node name="Camera2" type="Camera2D" parent="HBoxContainer/SubViewportContainer2/SubViewport"]
+[node name="Camera2" type="Camera2D" parent="Control/HBoxContainer/SubViewportContainer2/SubViewport"]
 limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("4_1x333")
 
-[node name="Parallax" parent="HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("3_uelyn")]
+[node name="Parallax" parent="Control/HBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("3_uelyn")]
 
 [node name="GameManager" parent="." instance=ExtResource("7_xm8t0")]
