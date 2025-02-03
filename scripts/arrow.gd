@@ -1,41 +1,29 @@
 extends PathFollow2D
 
-static var cooking_quality = {
-	"UNDER": 0.01,
-	"PERFECT": 0.33,
-	"OVER": 0.64
-}
-
 var speed = 0.17
 var target = 0.99
-var cooking_status = cooking_quality["UNDER"]
+var running = false
+
 
 func _process(delta):
-	cooking_movement(delta)
+	if running:
+		path_movement(delta)
 
-func loop_movement(delta):
-	progress_ratio += delta * speed
+func path_start():
+	progress_ratio = 0
+	path_reset()
+	running = true
 
-func cooking_reset():
+func path_inprogress():
+	return running
+
+func path_reset():
 	target = 0.99
-	cooking_status = cooking_quality["UNDER"]
+	running = false
 
-func cooking_movement(delta):
+func get_path_progress():
+	return progress_ratio
+
+func path_movement(delta):
 	if progress_ratio < target:
 		progress_ratio += delta * speed
-
-		if progress_ratio < cooking_quality["PERFECT"]:
-			pass
-			#print("cooking_status: UNDER")
-		elif progress_ratio > cooking_quality["UNDER"] and progress_ratio < cooking_quality["OVER"]:
-			pass
-			#print("cooking_status: PERFECT")
-			#target = cooking_quality["PERFECT"]
-		elif progress_ratio >= cooking_quality["OVER"]:
-			pass
-			#print("cooking_status: OVER")
-			#target = cooking_quality["OVER"]
-		else:
-			pass
-	#print("pr: " + str(progress_ratio) )
-	#print("delta: " + str(delta) )

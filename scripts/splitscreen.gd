@@ -31,7 +31,7 @@ func _on_level_loaded(level: Node, spawn_point1: Vector2, spawn_point2: Vector2)
 	# Remove previous level if it exists
 	if current_level:
 		current_level.queue_free()
-	
+
 	current_level = level
 	viewport1.add_child(current_level)
 	# 問題
@@ -39,11 +39,11 @@ func _on_level_loaded(level: Node, spawn_point1: Vector2, spawn_point2: Vector2)
 	#viewport2.add_child(level_clone)
 	
 	# Instance and add players
-	player1 = preload("res://scenes/player1_oscar.tscn").instantiate()
-	player2 = preload("res://scenes/player2_abel.tscn").instantiate()
+	player1 = preload("res://scenes/p1_oscar.tscn").instantiate()
+	player2 = preload("res://scenes/p2_abel.tscn").instantiate()
 	current_level.add_child(player1)
 	current_level.add_child(player2)
-	
+
 	# Set player positions
 	player1.global_position = spawn_point1
 	player2.global_position = spawn_point2
@@ -51,7 +51,7 @@ func _on_level_loaded(level: Node, spawn_point1: Vector2, spawn_point2: Vector2)
 	# Set camera targets
 	viewport1.get_node("Camera1").target = player1
 	viewport2.get_node("Camera2").target = player2
-	
+
 	print("on_level_loaded done")
 
 func _on_window_resized():
