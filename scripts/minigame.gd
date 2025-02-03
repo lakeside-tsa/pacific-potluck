@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
 	if p1_near_cauldron and Input.is_action_just_pressed("p1_action"):
 		print("p1 cauldron action")
 		if not cooking_started:
-			start_minigame()
+			cooking_start()
 		else:
 			get_cooking_status()
 
@@ -52,23 +52,19 @@ func _process(delta: float) -> void:
 	#	print("p2 cauldron action")
 
 	if progress >= 0.99:
-		bar.hide()
-		arrow_path.path_reset()
-		cooking_started = false
-		cooking_status = cooking_quality["UNDER"]
-
-
-func start_minigame():
-	arrow_path.path_reset()
-	bar.show()
-	cooking_start()
-
+		cooking_reset()
 
 func cooking_start():
-	cooking_status = cooking_quality["UNDER"]
+	cooking_reset()
+	bar.show()
 	cooking_started = true
 	arrow_path.path_start()
 
+func cooking_reset():
+	bar.hide()
+	arrow_path.path_reset()
+	cooking_started = false
+	cooking_status = cooking_quality["UNDER"]
 
 func get_cooking_status():
 	var progress = arrow_path.get_path_progress()
