@@ -1,14 +1,12 @@
 extends Node2D
 
-#var level_1_scene = preload("res://scenes/level_1.tscn")
-
 var current_level: Node
 var player1: Node
 var player2: Node
 
 func _ready():
-	var viewport1 = $Control/HBoxContainer/SubViewportContainer1/SubViewport
-	var viewport2 = $Control/HBoxContainer/SubViewportContainer2/SubViewport
+	var viewport1 = $CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport
+	var viewport2 = $CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport
 
 	viewport2.world_2d = viewport1.world_2d
 
@@ -21,13 +19,13 @@ func _ready():
 
 	game_manager.connect("level_loaded", Callable(self, "_on_level_loaded"))
 	game_manager.load_level(1)
-	print("Viewport1 size: ", $Control/HBoxContainer/SubViewportContainer1/SubViewport.size)
-	print("Viewport2 size: ", $Control/HBoxContainer/SubViewportContainer2/SubViewport.size)
+	print("Viewport1 size: ", $CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport.size)
+	print("Viewport2 size: ", $CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport.size)
 	print("ready done")
 
 func _on_level_loaded(level: Node, spawn_point1: Vector2, spawn_point2: Vector2):
-	var viewport1 = $Control/HBoxContainer/SubViewportContainer1/SubViewport
-	var viewport2 = $Control/HBoxContainer/SubViewportContainer2/SubViewport
+	var viewport1 = $CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport
+	var viewport2 = $CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport
 	print("on_level_loaded started")
 
 
@@ -58,8 +56,6 @@ func _on_level_loaded(level: Node, spawn_point1: Vector2, spawn_point2: Vector2)
 
 func _on_window_resized():
 	var window_size = get_viewport().size
-	var viewport1 = $Control/HBoxContainer/SubViewportContainer1/SubViewport
-	var viewport2 = $Control/HBoxContainer/SubViewportContainer2/SubViewport
-	#viewport1.size = Vector2(window_size.x / 2, window_size.y)
-	#viewport2.size = Vector2(window_size.x / 2, window_size.y)
+	var viewport1 = $CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport
+	var viewport2 = $CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport
 	print("Viewport sizes updated: ", viewport1.size)
