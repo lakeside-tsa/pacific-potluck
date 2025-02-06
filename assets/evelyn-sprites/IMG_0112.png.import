@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b36artxp7pcod"
-path="res://.godot/imported/crabCakes.png-d80ceda991429ca57a3d8294d24be3c9.ctex"
+uid="uid://2mhl2x7f5psg"
+path="res://.godot/imported/IMG_0112.png-d9e5c4c2ba12a67d439f7814b7e39390.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Evelyn-sprites/crabCakes.png"
-dest_files=["res://.godot/imported/crabCakes.png-d80ceda991429ca57a3d8294d24be3c9.ctex"]
+source_file="res://assets/evelyn-sprites/IMG_0112.png"
+dest_files=["res://.godot/imported/IMG_0112.png-d9e5c4c2ba12a67d439f7814b7e39390.ctex"]
 
 [params]
 

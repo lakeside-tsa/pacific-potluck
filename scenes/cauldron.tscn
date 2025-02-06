@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ccx8c4viomrat" path="res://assets/timing-bar.png" id="1_jtskx"]
 [ext_resource type="Script" path="res://scripts/minigame.gd" id="1_rkd12"]
 [ext_resource type="Texture2D" uid="uid://clfq4syn3qfpk" path="res://assets/arrow.png" id="2_th6so"]
-[ext_resource type="Texture2D" uid="uid://bihuh2yiddu31" path="res://assets/Evelyn-sprites/IMG_0114.png" id="2_txjki"]
+[ext_resource type="Texture2D" uid="uid://bihuh2yiddu31" path="res://assets/evelyn-sprites/IMG_0114.png" id="2_txjki"]
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="3_67spw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oekce"]

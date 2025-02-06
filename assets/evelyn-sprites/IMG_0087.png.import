@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2o0tjd2we8qj"
-path="res://.godot/imported/IMG_0087.png-d611baf9d731843568a187c1a625cf37.ctex"
+path="res://.godot/imported/IMG_0087.png-fd2b4c8993d8939cf38cc18cdded59d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Evelyn-sprites/IMG_0087.png"
-dest_files=["res://.godot/imported/IMG_0087.png-d611baf9d731843568a187c1a625cf37.ctex"]
+source_file="res://assets/evelyn-sprites/IMG_0087.png"
+dest_files=["res://.godot/imported/IMG_0087.png-fd2b4c8993d8939cf38cc18cdded59d4.ctex"]
 
 [params]
 
