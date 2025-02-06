@@ -21,7 +21,7 @@ func _ready():
 	game_manager.connect("level_loaded", Callable(self, "_on_level_loaded"))
 	game_manager.load_level(1)
 
-	Dialogic.start("timeline")
+	Dialogic.start("res://dialog/timeline.dtl")
 	print("Viewport1 size: ", viewport1.size)
 	print("Viewport2 size: ", viewport2.size)
 	print("ready done")
