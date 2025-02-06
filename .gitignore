@@ -18,3 +18,4 @@ mono_crash.*.json
 Thumbs.db
 .vscode/
 
+build/
