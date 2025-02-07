@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd1vn8bveggp"
-path="res://.godot/imported/Shadow.png-0d334ca4188ccafe54405b229a5bd9ce.ctex"
+uid="uid://32eoqu5bsdwa"
+path="res://.godot/imported/B-Fixes-tilemap.png-97ebde210fc951d68c169e451d1292cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Other/Shadow.png"
-dest_files=["res://.godot/imported/Shadow.png-0d334ca4188ccafe54405b229a5bd9ce.ctex"]
+source_file="res://assets/Tilemap/B-Fixes-tilemap.png"
+dest_files=["res://.godot/imported/B-Fixes-tilemap.png-97ebde210fc951d68c169e451d1292cc.ctex"]
 
 [params]
 

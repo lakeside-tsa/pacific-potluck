@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yiahakvy3stj"
-path="res://.godot/imported/Dust Particle.png-786f805f1ff10976d7d0f095491c9da0.ctex"
+uid="uid://b2gllj1wbdiwo"
+path="res://.godot/imported/cauldron.png-cf524c51239d3f75491d132797cc40b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Other/Dust Particle.png"
-dest_files=["res://.godot/imported/Dust Particle.png-786f805f1ff10976d7d0f095491c9da0.ctex"]
+source_file="res://assets/evelyn-sprites/cauldron.png"
+dest_files=["res://.godot/imported/cauldron.png-cf524c51239d3f75491d132797cc40b6.ctex"]
 
 [params]
 
