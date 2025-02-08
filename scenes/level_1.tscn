@@ -33,13 +33,13 @@ text = "Level 1"
 [node name="Apple_ing1" parent="Ingredients" instance=ExtResource("3_ahxml")]
 position = Vector2(817, 478)
 
+[node name="Apple_ing2" parent="Ingredients" instance=ExtResource("3_ahxml")]
+position = Vector2(622, 553)
+ingredient_number = 1
+
 [node name="Apple_ing3" parent="Ingredients" instance=ExtResource("3_ahxml")]
 position = Vector2(692, 525)
 ingredient_number = 2
-
-[node name="Apple_ing2" parent="Ingredients" instance=ExtResource("3_ahxml")]
-position = Vector2(535, 530)
-ingredient_number = 1
 
 [node name="Node2D" parent="." instance=ExtResource("5_8bxnv")]
 position = Vector2(0, 409)
