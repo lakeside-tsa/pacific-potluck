@@ -37,6 +37,7 @@ func _ready():
 	viewport1.get_node("Camera1").target = player1
 	viewport2.get_node("Camera2").target = player1
 
+	player1.hide()
 	subviewportcontainer2.hide()
 
 	print("Viewport1 size: ", viewport1.size)
@@ -83,3 +84,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		game_manager.load_level(1)
 	elif event.is_action_pressed("num02"):
 		game_manager.load_level(2)
+	if event.is_action_pressed("num03"):
+		game_manager.load_level(3)
+	elif event.is_action_pressed("num04"):
+		game_manager.load_level(4)

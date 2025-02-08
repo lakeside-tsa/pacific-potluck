@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://cq72pghotmhso"]
+
+[ext_resource type="Script" path="res://scripts/level_3.gd" id="1_rmnfo"]
+[ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="2_cs4jk"]
+[ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="3_2myjw"]
+[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/apple.tscn" id="4_at45n"]
+[ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://scenes/beach-ld.tscn" id="5_01lx3"]
+[ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="6_ju6tm"]
+[ext_resource type="PackedScene" uid="uid://basux2eokdr82" path="res://scenes/p3_duck.tscn" id="7_jmewl"]
+[ext_resource type="PackedScene" uid="uid://cuvibxi7nrl5g" path="res://scenes/p4_duck.tscn" id="8_7fl28"]
+
+[node name="level_3" type="Node"]
+script = ExtResource("1_rmnfo")
+
+[node name="Cauldron" parent="." instance=ExtResource("2_cs4jk")]
+z_index = 1
+position = Vector2(433, 463)
+scale = Vector2(0.6, 0.6)
+
+[node name="IngredientManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_2myjw")
+
+[node name="IngCounter" type="Label" parent="IngredientManager"]
+offset_left = 261.0
+offset_top = 374.0
+offset_right = 554.0
+offset_bottom = 404.0
+text = "Level 3"
+
+[node name="Ingredients" type="Node" parent="."]
+
+[node name="Apple_ing1" parent="Ingredients" instance=ExtResource("4_at45n")]
+position = Vector2(817, 478)
+
+[node name="Apple_ing2" parent="Ingredients" instance=ExtResource("4_at45n")]
+position = Vector2(393, 379)
+ingredient_number = 1
+
+[node name="Apple_ing3" parent="Ingredients" instance=ExtResource("4_at45n")]
+position = Vector2(692, 525)
+ingredient_number = 2
+
+[node name="Node2D" parent="." instance=ExtResource("5_01lx3")]
+position = Vector2(0, 409)
+
+[node name="SpawnPoint1" type="Marker2D" parent="."]
+position = Vector2(136, 35)
+
+[node name="SpawnPoint2" type="Marker2D" parent="."]
+position = Vector2(333, 55)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -9
+position = Vector2(135, 376)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_ju6tm")
+
+[node name="p3_duck" parent="." instance=ExtResource("7_jmewl")]
+position = Vector2(634, 608)
+
+[node name="p4_duck" parent="." instance=ExtResource("8_7fl28")]
+position = Vector2(974, 608)
+
+[node name="p4_duck2" parent="." instance=ExtResource("8_7fl28")]
+position = Vector2(1083, 608)
+
+[node name="p3_duck2" parent="." instance=ExtResource("7_jmewl")]
+position = Vector2(-1318, 290)
