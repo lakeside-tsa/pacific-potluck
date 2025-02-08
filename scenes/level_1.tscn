@@ -26,7 +26,7 @@ offset_left = 261.0
 offset_top = 374.0
 offset_right = 554.0
 offset_bottom = 404.0
-text = "Desu"
+text = "Level 1"
 
 [node name="Ingredients" type="Node" parent="."]
 

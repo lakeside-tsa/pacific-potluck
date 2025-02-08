@@ -4,8 +4,8 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	ingredient_manager.set_ing_names("apple", "banana", "sushi")
-	Dialogic.start("res://dialog/level1.dtl")
+	ingredient_manager.set_ing_names("choco", "eggplant", "whatever_bro")
+	Dialogic.start("res://dialog/level2.dtl")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
