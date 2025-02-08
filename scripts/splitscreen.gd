@@ -84,7 +84,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		game_manager.load_level(1)
 	elif event.is_action_pressed("num02"):
 		game_manager.load_level(2)
-	if event.is_action_pressed("num03"):
+	elif event.is_action_pressed("num03"):
 		game_manager.load_level(3)
 	elif event.is_action_pressed("num04"):
 		game_manager.load_level(4)
