@@ -9,7 +9,8 @@ var p2_near_cauldron = false
 static var cooking_quality = {
 	"UNDER": 0.01,
 	"PERFECT": 0.33,
-	"OVER": 0.64
+	"OVER": 0.64,
+	"DESTROYED": 0.98
 }
 
 var cooking_status = cooking_quality["UNDER"]
@@ -39,14 +40,16 @@ func _on_body_exited(_body: Node2D) -> void:
 func _process(delta: float) -> void:
 	var progress = arrow_path.get_path_progress()
 
-	if not arrow_path.path_inprogress():
+	if progress <= 0.0001:
 		bar.hide()
 	if p1_near_cauldron and Input.is_action_just_pressed("p1_action"):
 		print("p1 cauldron action")
 		if not cooking_started:
 			cooking_start()
 		else:
-			get_cooking_status()
+			cooking_stop()
+	elif progress >= cooking_quality["DESTROYED"] :
+		cooking_stop()
 
 	#if p2_near_cauldron and Input.is_action_just_pressed("p2_action"):
 	#	print("p2 cauldron action")
@@ -66,11 +69,20 @@ func cooking_reset():
 	cooking_started = false
 	cooking_status = cooking_quality["UNDER"]
 
-func get_cooking_status():
-	var progress = arrow_path.get_path_progress()
+func cooking_stop():
+	var progress = 0.0
+
+	progress = arrow_path.get_path_progress()
+	arrow_path.path_stop()
+	cooking_reset()
+
+	await get_tree().create_timer(1.0).timeout
+
 	if progress < cooking_quality["PERFECT"]:
 		print("cooking_status: UNDER")
-	elif progress >= cooking_quality["OVER"]:
+	elif progress < cooking_quality["OVER"]:
+		print("cooking_status: PERFECT")
+	elif progress < cooking_quality["DESTROYED"]:
 		print("cooking_status: OVER")
 	else:
-		print("cooking_status: PERFECT")
+		print("cooking_status: DESTROYED")
