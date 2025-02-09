@@ -14,7 +14,7 @@ script = ExtResource("1_kd0sr")
 
 [node name="Cauldron" parent="." instance=ExtResource("7_rubto")]
 z_index = 1
-position = Vector2(433, 463)
+position = Vector2(395, 438)
 scale = Vector2(0.6, 0.6)
 
 [node name="IngredientManager" type="Node" parent="."]
@@ -45,10 +45,10 @@ ingredient_number = 2
 position = Vector2(0, 409)
 
 [node name="SpawnPoint1" type="Marker2D" parent="."]
-position = Vector2(136, 35)
+position = Vector2(313, 333)
 
 [node name="SpawnPoint2" type="Marker2D" parent="."]
-position = Vector2(333, 55)
+position = Vector2(266, 328)
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -9
