@@ -20,6 +20,8 @@ var cooking_started = false
 
 func _ready() -> void:
 	input_pickable = true
+	Global.score = 0
+	score_label.text = str(Global.score)
 	bar.hide()
 
 
