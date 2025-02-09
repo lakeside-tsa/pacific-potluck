@@ -48,18 +48,20 @@ func _process(_delta: float) -> void:
 		cooking_stop()
 	if p1_near_cauldron and Input.is_action_just_pressed("p1_action"):
 		if not cooking_started:
-			print("p1 cooking started")
-			cooking_start()
+			if %IngredientManager.check_pantry() :
+				%IngredientManager.use_ingredients()
+				cooking_start()
 		else:
 			cooking_stop()
-			print("p1 cooking stopped")
+
 	if p2_near_cauldron and Input.is_action_just_pressed("p2_action"):
 		if not cooking_started:
-			print("p2 cooking started")
-			cooking_start()
+			if %IngredientManager.check_pantry() :
+				%IngredientManager.use_ingredients()
+				cooking_start()
 		else:
 			cooking_stop()
-			print("p2 cooking stopped")
+
 	if progress >= 0.99:
 		cooking_reset()
 
