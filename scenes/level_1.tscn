@@ -98,3 +98,7 @@ material = SubResource("ShaderMaterial_xah76")
 position = Vector2(-106.5, 1318)
 scale = Vector2(48.3984, 7.78125)
 texture = ExtResource("10_o8dyn")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Icon"]
+position = Vector2(-0.371918, 1.28514)
+scale = Vector2(6.4124, 6.66988)
