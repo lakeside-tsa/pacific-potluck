@@ -20,4 +20,8 @@ func set_ing_names(name1, name2, name3):
 
 func add_ing(ing_num):
 	ing_vals[ing_num] = ing_vals[ing_num] + 1
+	if OS.is_debug_build():
+		ing_vals[0] += randi() % 5 + 1
+		ing_vals[1] += randi() % 5 + 1
+		ing_vals[2] += randi() % 5 + 1
 	set_ing_label()
