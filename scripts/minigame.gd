@@ -4,6 +4,8 @@ extends Area2D
 @onready var arrow_path = $Bar/Path2D/PathFollow2D
 @onready var score_label = $ScoreLabel
 
+signal level_completed
+
 var p1_near_cauldron = false
 var p2_near_cauldron = false
 
@@ -97,3 +99,6 @@ func cooking_stop():
 		print("cooking_status: DESTROYED")
 
 	score_label.text = str(Global.score)
+
+	if Global.score >= 15 :
+		emit_signal("level_completed")

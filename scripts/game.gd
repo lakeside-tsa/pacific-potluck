@@ -1,7 +1,8 @@
 extends Node
 
-@warning_ignore("unused_signal")
-signal level_loaded(level, spawn_point1, spawn_point2)
+#@warning_ignore("unused_signal")
+#signal level_loaded(level, spawn_point1, spawn_point2)
+signal level_completed
 
 @onready var viewport1 = $Splitscreen/CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport1
 @onready var viewport2 = $Splitscreen/CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport2
@@ -51,9 +52,14 @@ func load_level(level_number: int):
 	viewport1.get_node("Camera1").target = player1
 	viewport2.get_node("Camera2").target = player2
 
+	var cauldron_node = current_level_node.find_child("Cauldron")
+	cauldron_node.connect("level_completed", Callable(self, "_on_level_completed"))
 
-func next_level():
+
+func _on_level_completed():
+	await get_tree().create_timer(2.0).timeout
 	load_level((current_level_number % 4) + 1)
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("num01"):
