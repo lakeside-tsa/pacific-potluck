@@ -21,7 +21,17 @@ func set_ing_names(name1, name2, name3):
 func add_ing(ing_num):
 	ing_vals[ing_num] = ing_vals[ing_num] + 1
 	if OS.is_debug_build():
-		ing_vals[0] += randi() % 5 + 1
-		ing_vals[1] += randi() % 5 + 1
-		ing_vals[2] += randi() % 5 + 1
+		add_more_ing(ing_num)
 	set_ing_label()
+
+
+func add_more_ing(ing_num):
+	ing_vals[0] += randi() % 5 + 1
+	ing_vals[1] += randi() % 5 + 1
+	ing_vals[2] += randi() % 5 + 1
+	set_ing_label()
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("key_plus") :
+		add_more_ing(randi() % 3)
