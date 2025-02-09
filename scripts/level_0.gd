@@ -1,5 +1,6 @@
 extends Node
 
+@onready var overlay = $OverlayScene
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	overlay.setTopLeft("1: level 1\n2: level2\n3: level 3\n4: level 4")

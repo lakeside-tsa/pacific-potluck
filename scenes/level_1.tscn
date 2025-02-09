@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=15 format=3 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
+[ext_resource type="PackedScene" uid="uid://cv66ab71crrxd" path="res://scenes/overlay.tscn" id="2_ptpf1"]
 [ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/apple.tscn" id="3_ahxml"]
 [ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://scenes/beach-ld.tscn" id="5_8bxnv"]
 [ext_resource type="PackedScene" uid="uid://basux2eokdr82" path="res://scenes/p3_duck.tscn" id="7_oifxl"]
@@ -36,6 +37,8 @@ shader_parameter/fast_noise = SubResource("NoiseTexture2D_putd4")
 
 [node name="level_1" type="Node"]
 script = ExtResource("1_kd0sr")
+
+[node name="OverlayScene" parent="." instance=ExtResource("2_ptpf1")]
 
 [node name="Cauldron" parent="." instance=ExtResource("7_rubto")]
 z_index = 1

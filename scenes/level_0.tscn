@@ -1,26 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bep5j4jhvsb0f"]
+[gd_scene load_steps=4 format=3 uid="uid://bep5j4jhvsb0f"]
 
 [ext_resource type="Script" path="res://scripts/level_0.gd" id="1_0wk6h"]
+[ext_resource type="PackedScene" uid="uid://cv66ab71crrxd" path="res://scenes/overlay.tscn" id="2_vmryi"]
 [ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="6_8uu52"]
 
 [node name="level_0" type="Node"]
 script = ExtResource("1_0wk6h")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 55.0
-offset_top = -138.0
-offset_right = 170.0
-offset_bottom = -5.0
-scale = Vector2(2, 2)
-text = "1: level 1
-2: level 2
-3: level 3
-4: level 4"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -9
-position = Vector2(11, -12)
-scale = Vector2(1.5, 1.5)
+position = Vector2(0.999939, 1)
+scale = Vector2(0.742188, 0.688272)
 texture = ExtResource("6_8uu52")
+
+[node name="OverlayScene" parent="." instance=ExtResource("2_vmryi")]
