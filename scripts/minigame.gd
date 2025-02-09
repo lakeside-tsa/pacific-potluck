@@ -3,6 +3,7 @@ extends Area2D
 @onready var bar = $Bar
 @onready var arrow_path = $Bar/Path2D/PathFollow2D
 @onready var score_label = $ScoreLabel
+@onready var level_completed_flag = false
 
 signal level_completed
 
@@ -48,24 +49,24 @@ func _process(_delta: float) -> void:
 		bar.hide()
 	if progress >= cooking_quality["DESTROYED"] :
 		cooking_stop()
-	if p1_near_cauldron and Input.is_action_just_pressed("p1_action"):
-		if not cooking_started:
-			if %IngredientManager.check_pantry() :
-				%IngredientManager.use_ingredients()
-				cooking_start()
-		else:
-			cooking_stop()
 
-	if p2_near_cauldron and Input.is_action_just_pressed("p2_action"):
-		if not cooking_started:
-			if %IngredientManager.check_pantry() :
-				%IngredientManager.use_ingredients()
-				cooking_start()
-		else:
-			cooking_stop()
-
-	if progress >= 0.99:
-		cooking_reset()
+	if level_completed_flag == false :
+		if p1_near_cauldron and Input.is_action_just_pressed("p1_action"):
+			if not cooking_started:
+				if %IngredientManager.check_pantry() :
+					%IngredientManager.use_ingredients()
+					cooking_start()
+			else:
+				cooking_stop()
+		if p2_near_cauldron and Input.is_action_just_pressed("p2_action"):
+			if not cooking_started:
+				if %IngredientManager.check_pantry() :
+					%IngredientManager.use_ingredients()
+					cooking_start()
+			else:
+				cooking_stop()
+		if progress >= 0.99:
+			cooking_reset()
 
 func cooking_start():
 	cooking_reset()
@@ -101,4 +102,5 @@ func cooking_stop():
 	score_label.text = str(Global.score)
 
 	if Global.score >= 15 :
+		level_completed_flag = true
 		emit_signal("level_completed")
