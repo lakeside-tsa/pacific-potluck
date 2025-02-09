@@ -36,7 +36,7 @@ func _on_body_exited(_body: Node2D) -> void:
 		p2_near_cauldron = false
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var progress = arrow_path.get_path_progress()
 
 	if progress <= 0.0001 :
