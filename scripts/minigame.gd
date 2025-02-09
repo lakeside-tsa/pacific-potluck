@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var bar = $Bar
 @onready var arrow_path = $Bar/Path2D/PathFollow2D
+@onready var score_label = $ScoreLabel
 
 var p1_near_cauldron = false
 var p2_near_cauldron = false
@@ -81,9 +82,14 @@ func cooking_stop():
 
 	if progress < cooking_quality["PERFECT"]:
 		print("cooking_status: UNDER")
+		Global.score = Global.score + 1
 	elif progress < cooking_quality["OVER"]:
 		print("cooking_status: PERFECT")
+		Global.score = Global.score + 3
 	elif progress < cooking_quality["DESTROYED"]:
 		print("cooking_status: OVER")
+		Global.score = Global.score + 1
 	else:
 		print("cooking_status: DESTROYED")
+
+	score_label.text = str(Global.score)

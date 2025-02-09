@@ -4,9 +4,11 @@ extends Node
 signal level_loaded(level, spawn_point1, spawn_point2)
 
 var current_level_number = 0
+var current_score = 0
 
 func load_level(level_number: int):
 	current_level_number = level_number
+	current_score = 0
 
 	var level_scene = load("res://scenes/level_" + str(level_number) + ".tscn")
 	var level_instance = level_scene.instantiate()

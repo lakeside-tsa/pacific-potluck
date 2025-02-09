@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgbyrfskejfog"]
+[gd_scene load_steps=5 format=3 uid="uid://cgbyrfskejfog"]
 
 [ext_resource type="Script" path="res://scripts/splitscreen.gd" id="1_e0shh"]
 [ext_resource type="Script" path="res://scripts/camera_1.gd" id="1_ol4fa"]
 [ext_resource type="Script" path="res://scripts/canvaslayer.gd" id="2_hsxpx"]
 [ext_resource type="Script" path="res://scripts/camera_2.gd" id="4_1x333"]
-[ext_resource type="PackedScene" uid="uid://dj8kitg0fqqeg" path="res://scenes/game_manager.tscn" id="7_xm8t0"]
 
 [node name="Splitscreen" type="Node2D"]
 script = ExtResource("1_e0shh")
@@ -54,5 +53,3 @@ zoom = Vector2(1.4, 1.4)
 limit_smoothed = true
 position_smoothing_enabled = true
 script = ExtResource("4_1x333")
-
-[node name="GameManager" parent="." instance=ExtResource("7_xm8t0")]
