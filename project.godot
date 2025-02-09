@@ -19,6 +19,8 @@ boot_splash/stretch/scale=0.7
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Global="*res://scripts/global.gd"
+Overlay="*res://scenes/overlay.tscn"
 
 [dialogic]
 
