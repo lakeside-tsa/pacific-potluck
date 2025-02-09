@@ -1,9 +1,9 @@
 [gd_scene load_steps=22 format=3 uid="uid://basux2eokdr82"]
 
-[ext_resource type="Texture2D" uid="uid://c3i78gfx78rat" path="res://assets/Enemies/Duck/Fall (36x36).png" id="2_y300d"]
-[ext_resource type="Texture2D" uid="uid://dh0px6wg5hf1k" path="res://assets/Enemies/Duck/Hit (36x36).png" id="3_cddqn"]
-[ext_resource type="Texture2D" uid="uid://duvrqxs6qjf2i" path="res://assets/Enemies/Duck/Idle (36x36).png" id="4_vs4h8"]
-[ext_resource type="Texture2D" uid="uid://dsur1jlv4dbj7" path="res://assets/Enemies/Duck/Jump (36x36).png" id="5_xdmee"]
+[ext_resource type="Texture2D" uid="uid://c3i78gfx78rat" path="res://assets/Duck/Fall (36x36).png" id="2_y300d"]
+[ext_resource type="Texture2D" uid="uid://dh0px6wg5hf1k" path="res://assets/Duck/Hit (36x36).png" id="3_cddqn"]
+[ext_resource type="Texture2D" uid="uid://duvrqxs6qjf2i" path="res://assets/Duck/Idle (36x36).png" id="4_vs4h8"]
+[ext_resource type="Texture2D" uid="uid://dsur1jlv4dbj7" path="res://assets/Duck/Jump (36x36).png" id="5_xdmee"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_51st5"]
 atlas = ExtResource("3_cddqn")

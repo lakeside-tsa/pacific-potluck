@@ -1,15 +1,15 @@
 [gd_scene load_steps=15 format=3 uid="uid://di3ftfvqmvkv6"]
 
-[ext_resource type="Texture2D" uid="uid://b5dngi30n2qv6" path="res://assets/food/FFF-PF.png" id="1_2kmfc"]
-[ext_resource type="Texture2D" uid="uid://b36artxp7pcod" path="res://assets/evelyn-sprites/crabCakes.png" id="1_vixg7"]
-[ext_resource type="Texture2D" uid="uid://bx4pjx183agq2" path="res://assets/food/FFF-OC.png" id="2_iocs0"]
-[ext_resource type="Texture2D" uid="uid://brdyxb6cosns4" path="res://assets/food/FFF-UC.png" id="3_bd7fc"]
-[ext_resource type="Texture2D" uid="uid://dm88navuuy8k7" path="res://assets/food/PPP-PF.png" id="4_mnwne"]
-[ext_resource type="Texture2D" uid="uid://b2j8tqj551r8x" path="res://assets/food/PPP-OC.png" id="5_y4vod"]
-[ext_resource type="Texture2D" uid="uid://dafhl5bv2tqii" path="res://assets/food/PPP-UC.png" id="6_w4sv0"]
-[ext_resource type="Texture2D" uid="uid://d1w0a2jrd6pty" path="res://assets/food/SPN-PF.png" id="7_e3nt3"]
-[ext_resource type="Texture2D" uid="uid://tlo1vk7tj30o" path="res://assets/food/SPN-OC.png" id="8_ruaac"]
-[ext_resource type="Texture2D" uid="uid://bqbtfso0yvwoy" path="res://assets/food/SPN-UC.png" id="9_lwdjj"]
+[ext_resource type="Texture2D" uid="uid://b5dngi30n2qv6" path="res://assets/Food/FFF-PF.png" id="1_2kmfc"]
+[ext_resource type="Texture2D" uid="uid://b36artxp7pcod" path="res://assets/E-Sprites/crabCakes.png" id="1_vixg7"]
+[ext_resource type="Texture2D" uid="uid://bx4pjx183agq2" path="res://assets/Food/FFF-OC.png" id="2_iocs0"]
+[ext_resource type="Texture2D" uid="uid://brdyxb6cosns4" path="res://assets/Food/FFF-UC.png" id="3_bd7fc"]
+[ext_resource type="Texture2D" uid="uid://dm88navuuy8k7" path="res://assets/Food/PPP-PF.png" id="4_mnwne"]
+[ext_resource type="Texture2D" uid="uid://b2j8tqj551r8x" path="res://assets/Food/PPP-OC.png" id="5_y4vod"]
+[ext_resource type="Texture2D" uid="uid://dafhl5bv2tqii" path="res://assets/Food/PPP-UC.png" id="6_w4sv0"]
+[ext_resource type="Texture2D" uid="uid://d1w0a2jrd6pty" path="res://assets/Food/SPN-PF.png" id="7_e3nt3"]
+[ext_resource type="Texture2D" uid="uid://tlo1vk7tj30o" path="res://assets/Food/SPN-OC.png" id="8_ruaac"]
+[ext_resource type="Texture2D" uid="uid://bqbtfso0yvwoy" path="res://assets/Food/SPN-UC.png" id="9_lwdjj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w2g15"]
 atlas = ExtResource("1_vixg7")
@@ -53,6 +53,7 @@ animations = [{
 [node name="Food" type="Node2D"]
 
 [node name="Crab Cakes" type="AnimatedSprite2D" parent="."]
+scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_32bb5")
 animation = &"under"
 

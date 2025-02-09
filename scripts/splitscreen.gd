@@ -72,8 +72,6 @@ func _on_level_loaded(level: Node, spawn_point1: Vector2, spawn_point2: Vector2)
 
 	print("on_level_loaded done")
 
-func _process(delta: float) -> void:
-	pass
 
 func _on_window_resized():
 	#var window_size = get_viewport().size

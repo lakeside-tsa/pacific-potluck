@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="8_1sk5l"]
 [ext_resource type="PackedScene" uid="uid://cuvibxi7nrl5g" path="res://scenes/p4_duck.tscn" id="8_bkma5"]
 [ext_resource type="Shader" path="res://shaders/water.gdshader" id="9_bhve8"]
-[ext_resource type="Texture2D" uid="uid://ci2vxkuoidvig" path="res://icon.svg" id="10_o8dyn"]
+[ext_resource type="Texture2D" uid="uid://c2kou1pukxyi1" path="res://icon.svg" id="10_o8dyn"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_457nn"]
 noise_type = 2
