@@ -24,7 +24,10 @@ Overlay="*res://scenes/overlay.tscn"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"abellee": "res://assets/evelyn-sprites/abellee.dch",
+"dialog/abellee": "res://abellee.dch"
+}
 directories/dtl_directory={
 "level1": "res://dialog/level1.dtl",
 "level2": "res://dialog/level2.dtl",
@@ -54,6 +57,8 @@ text/autopauses={}
 layout/style_list=[]
 layout/default_style="Default"
 glossary/default_case_sensitive=true
+layout/style_list=["res://dialog/visnov.tres"]
+layout/default_style="res://visnov.tres"
 variables={}
 
 [display]
@@ -66,6 +71,12 @@ window/stretch/aspect="expand"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/rmsmartshape/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://abel_portraits/": "purple"
+}
 
 [input]
 

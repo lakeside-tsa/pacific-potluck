@@ -1,0 +1,38 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://d2uh6nmc6p3rh"]
+
+[ext_resource type="Texture2D" uid="uid://c544y7symu2ow" path="res://abel_portraits/abel_portrait_4.tres" id="1_wt68j"]
+[ext_resource type="Texture2D" uid="uid://dx4qmjkiplgdh" path="res://abel_portraits/abel_portrait_1.tres" id="2_w2exk"]
+[ext_resource type="Texture2D" uid="uid://btit375tgmwis" path="res://abel_portraits/abel_portrait_3.tres" id="3_tn6n3"]
+[ext_resource type="Texture2D" uid="uid://crqneibucaopn" path="res://abel_portraits/abel_portrait_5.tres" id="4_j1iff"]
+[ext_resource type="Texture2D" uid="uid://b8eannt80mlp1" path="res://abel_portraits/abel_portrait_6.tres" id="5_p8dxi"]
+[ext_resource type="Texture2D" uid="uid://c2vfs50vra2i2" path="res://abel_portraits/abel_portrait_7.tres" id="6_31wtu"]
+[ext_resource type="Texture2D" uid="uid://d3m3024n8x42g" path="res://abel_portraits/abel_portrait_2.tres" id="7_nww3j"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wt68j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_w2exk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tn6n3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j1iff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p8dxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_31wtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nww3j")
+}],
+"loop": true,
+"name": &"sprite frames",
+"speed": 5.0
+}]
