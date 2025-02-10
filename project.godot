@@ -25,8 +25,7 @@ Overlay="*res://scenes/overlay.tscn"
 [dialogic]
 
 directories/dch_directory={
-"abellee": "res://assets/evelyn-sprites/abellee.dch",
-"dialog/abellee": "res://abellee.dch"
+"abellee": "res://abellee.dch"
 }
 directories/dtl_directory={
 "level1": "res://dialog/level1.dtl",
@@ -54,11 +53,9 @@ animations/leave_default_length=0.5
 animations/leave_default_wait=true
 animations/cross_fade_default_length=0.5
 text/autopauses={}
-layout/style_list=[]
-layout/default_style="Default"
-glossary/default_case_sensitive=true
 layout/style_list=["res://dialog/visnov.tres"]
 layout/default_style="res://visnov.tres"
+glossary/default_case_sensitive=true
 variables={}
 
 [display]
