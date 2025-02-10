@@ -43,7 +43,7 @@ script = ExtResource("1_kd0sr")
 
 [node name="Cauldron" parent="." instance=ExtResource("7_rubto")]
 z_index = 1
-position = Vector2(395, 438)
+position = Vector2(112, 441)
 scale = Vector2(0.6, 0.6)
 
 [node name="IngredientManager" type="Node" parent="."]
@@ -51,10 +51,10 @@ unique_name_in_owner = true
 script = ExtResource("1_sy0kq")
 
 [node name="IngCounter" type="Label" parent="IngredientManager"]
-offset_left = 261.0
-offset_top = 374.0
-offset_right = 554.0
-offset_bottom = 404.0
+offset_left = -82.0
+offset_top = 378.0
+offset_right = 211.0
+offset_bottom = 408.0
 text = "Level 1"
 
 [node name="Ingredients" type="Node" parent="."]
@@ -74,12 +74,13 @@ ingredient_number = 2
 position = Vector2(0, 409)
 
 [node name="SpawnPoint1" type="Marker2D" parent="."]
-position = Vector2(313, 333)
+position = Vector2(-53, 443)
 
 [node name="SpawnPoint2" type="Marker2D" parent="."]
-position = Vector2(266, 328)
+position = Vector2(244, 448)
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 z_index = -9
 position = Vector2(135, 376)
 scale = Vector2(1.5, 1.5)

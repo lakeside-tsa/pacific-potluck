@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ce6yvnwt26kkw"
+path="res://.godot/imported/Yellow Run (Sand, Muffled).mp3-03b97f71fe5286adc069586e6c4b5dcc.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Yellow Run (Sand, Muffled).mp3"
+dest_files=["res://.godot/imported/Yellow Run (Sand, Muffled).mp3-03b97f71fe5286adc069586e6c4b5dcc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

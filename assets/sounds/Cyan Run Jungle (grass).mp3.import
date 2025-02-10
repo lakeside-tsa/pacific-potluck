@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5646xxqodo3x"
+path="res://.godot/imported/Cyan Run Jungle (grass).mp3-e6712fe4de16efd7e6ceb09f411a5a18.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Cyan Run Jungle (grass).mp3"
+dest_files=["res://.godot/imported/Cyan Run Jungle (grass).mp3-e6712fe4de16efd7e6ceb09f411a5a18.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
