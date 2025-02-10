@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4vccsaskxygi"]
+
+[ext_resource type="Script" path="res://scripts/ingredient.gd" id="1_s18x4"]
+[ext_resource type="Texture2D" uid="uid://bhdeq58dghxq4" path="res://assets/Food/un-ing/crate.png" id="2_eqqyp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ydtyn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eqqyp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_36i68"]
+radius = 8.0
+
+[node name="ing1" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_s18x4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ydtyn")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_36i68")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

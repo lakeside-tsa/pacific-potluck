@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_n2lda"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="2_708p1"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="3_xfbd6"]
-[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/apple.tscn" id="4_pww5x"]
+[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/ing1.tscn" id="4_pww5x"]
 [ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="6_6ciwm"]
 [ext_resource type="PackedScene" uid="uid://basux2eokdr82" path="res://scenes/p3_duck.tscn" id="7_awkdg"]
 [ext_resource type="PackedScene" uid="uid://cuvibxi7nrl5g" path="res://scenes/p4_duck.tscn" id="8_tyr6d"]

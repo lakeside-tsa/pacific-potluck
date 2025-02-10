@@ -1,10 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=18 format=3 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
 [ext_resource type="PackedScene" uid="uid://cv66ab71crrxd" path="res://scenes/overlay.tscn" id="2_ptpf1"]
-[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/apple.tscn" id="3_ahxml"]
+[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/ing1.tscn" id="3_ahxml"]
 [ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://scenes/beach-ld.tscn" id="5_8bxnv"]
+[ext_resource type="PackedScene" uid="uid://btljl67540cjj" path="res://scenes/ing2.tscn" id="6_ja8px"]
+[ext_resource type="PackedScene" uid="uid://dlqw8nxlq3gwy" path="res://scenes/ing3.tscn" id="7_0bpqi"]
 [ext_resource type="PackedScene" uid="uid://basux2eokdr82" path="res://scenes/p3_duck.tscn" id="7_oifxl"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="7_rubto"]
 [ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="8_1sk5l"]
@@ -43,7 +45,7 @@ script = ExtResource("1_kd0sr")
 
 [node name="Cauldron" parent="." instance=ExtResource("7_rubto")]
 z_index = 1
-position = Vector2(112, 441)
+position = Vector2(115, 439)
 scale = Vector2(0.6, 0.6)
 
 [node name="IngredientManager" type="Node" parent="."]
@@ -59,16 +61,14 @@ text = "Level 1"
 
 [node name="Ingredients" type="Node" parent="."]
 
-[node name="Apple_ing1" parent="Ingredients" instance=ExtResource("3_ahxml")]
-position = Vector2(817, 478)
+[node name="ing1" parent="Ingredients" instance=ExtResource("3_ahxml")]
+position = Vector2(368, 462)
 
-[node name="Apple_ing2" parent="Ingredients" instance=ExtResource("3_ahxml")]
-position = Vector2(622, 553)
-ingredient_number = 1
+[node name="ing2" parent="Ingredients" instance=ExtResource("6_ja8px")]
+position = Vector2(631, 476)
 
-[node name="Apple_ing3" parent="Ingredients" instance=ExtResource("3_ahxml")]
-position = Vector2(692, 525)
-ingredient_number = 2
+[node name="ing3" parent="Ingredients" instance=ExtResource("7_0bpqi")]
+position = Vector2(-273, 364)
 
 [node name="Node2D" parent="." instance=ExtResource("5_8bxnv")]
 position = Vector2(0, 409)
@@ -77,12 +77,11 @@ position = Vector2(0, 409)
 position = Vector2(-53, 443)
 
 [node name="SpawnPoint2" type="Marker2D" parent="."]
-position = Vector2(244, 448)
+position = Vector2(177, 436)
 
 [node name="Background" type="Sprite2D" parent="."]
-visible = false
 z_index = -9
-position = Vector2(135, 376)
+position = Vector2(-672, -59)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_1sk5l")
 

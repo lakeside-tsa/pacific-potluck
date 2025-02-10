@@ -25,7 +25,7 @@ Overlay="*res://scenes/overlay.tscn"
 [dialogic]
 
 directories/dch_directory={
-"abellee": "res://abellee.dch"
+"evelyn-sprites/abellee": "res://assets/evelyn-sprites/abellee.dch"
 }
 directories/dtl_directory={
 "level1": "res://dialog/level1.dtl",
