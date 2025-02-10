@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=16 format=3 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cuvibxi7nrl5g" path="res://scenes/p4_duck.tscn" id="8_bkma5"]
 [ext_resource type="Shader" path="res://shaders/water.gdshader" id="9_bhve8"]
 [ext_resource type="Texture2D" uid="uid://c2kou1pukxyi1" path="res://icon.svg" id="10_o8dyn"]
+[ext_resource type="AudioStream" uid="uid://7we2ma1yd81n" path="res://assets/music/lv1_beach.ogg" id="12_uje8k"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_457nn"]
 noise_type = 2
@@ -105,3 +106,8 @@ texture = ExtResource("10_o8dyn")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Icon"]
 position = Vector2(-0.371918, 1.28514)
 scale = Vector2(6.4124, 6.66988)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_uje8k")
+volume_db = -6.0
+autoplay = true

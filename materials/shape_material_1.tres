@@ -4,11 +4,11 @@
 [ext_resource type="Script" path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" id="2"]
 [ext_resource type="Script" path="res://addons/rmsmartshape/normal_range.gd" id="3"]
 [ext_resource type="Resource" uid="uid://bawrh3ncckjok" path="res://materials/edge/edge_grass.tres" id="4"]
-[ext_resource type="Texture2D" uid="uid://vdsah06uhbv4" path="res://assets/fill.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://dhfk5sw1eqtua" path="res://assets/Spring/rock.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://vdsah06uhbv4" path="res://assets/Other/Spring/fill.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dhfk5sw1eqtua" path="res://assets/Other/Spring/rock.png" id="6"]
 [ext_resource type="Script" path="res://addons/rmsmartshape/materials/edge_material.gd" id="7"]
-[ext_resource type="Texture2D" uid="uid://dd864fqvkpu2i" path="res://assets/Spring/rock-corner-outer.png" id="8"]
-[ext_resource type="Texture2D" uid="uid://bqr0hopmasl4l" path="res://assets/Spring/rock-corner-innerr.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://dd864fqvkpu2i" path="res://assets/Other/Spring/rock-corner-outer.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://bqr0hopmasl4l" path="res://assets/Other/Spring/rock-corner-innerr.png" id="9"]
 
 [sub_resource type="Resource" id="1"]
 script = ExtResource("3")

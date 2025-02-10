@@ -26,7 +26,7 @@ point_in = Vector2(164.815, 454.084)
 point_out = Vector2(-164.815, -454.084)
 properties = SubResource("Resource_cvoen")
 
-[sub_resource type="Resource" id="Resource_5mr2i"]
+[sub_resource type="Resource" id="Resource_ns0n1"]
 script = ExtResource("9_8rg6q")
 texture_idx = 0
 flip = false
@@ -37,9 +37,9 @@ script = ExtResource("10_b5dov")
 position = Vector2(4477.54, 917.458)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
-properties = SubResource("Resource_5mr2i")
+properties = SubResource("Resource_ns0n1")
 
-[sub_resource type="Resource" id="Resource_6bvis"]
+[sub_resource type="Resource" id="Resource_887lc"]
 script = ExtResource("9_8rg6q")
 texture_idx = 0
 flip = false
@@ -50,9 +50,9 @@ script = ExtResource("10_b5dov")
 position = Vector2(4504.45, 2212.44)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
-properties = SubResource("Resource_6bvis")
+properties = SubResource("Resource_887lc")
 
-[sub_resource type="Resource" id="Resource_jy674"]
+[sub_resource type="Resource" id="Resource_rtodg"]
 script = ExtResource("9_8rg6q")
 texture_idx = 0
 flip = false
@@ -63,7 +63,7 @@ script = ExtResource("10_b5dov")
 position = Vector2(-2710.44, 2303.25)
 point_in = Vector2(0, 0)
 point_out = Vector2(0, 0)
-properties = SubResource("Resource_jy674")
+properties = SubResource("Resource_rtodg")
 
 [sub_resource type="Resource" id="Resource_1b1k1"]
 script = ExtResource("10_b5dov")
@@ -161,4 +161,4 @@ collision_polygon_node_path = NodePath("../CollisionPolygon2D")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 modulate = Color(1, 1, 1, 0.3)
-polygon = PackedVector2Array(-2770.98, 917.458, -2716.74, 842.627, -2506.84, 787.086, -1707.93, 725.891, 4477.54, 917.458, 4504.45, 2212.44, -2710.44, 2303.25, -2678.9, 1780.64, -2691.99, 1325.56, -2721.06, 1107.38, -2770.98, 917.458)
+polygon = PackedVector2Array(-2770.98, 917.458, -2716.74, 842.627, -2506.84, 787.086, -1707.93, 725.891, 4477.54, 917.458, 4504.45, 2212.44, -2710.44, 2303.25, -2678.9, 1780.64, -2691.99, 1325.55, -2721.06, 1107.38, -2770.98, 917.458)
