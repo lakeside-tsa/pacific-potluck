@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=19 format=3 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
@@ -12,6 +12,8 @@
 [ext_resource type="Shader" path="res://shaders/water.gdshader" id="9_bhve8"]
 [ext_resource type="Texture2D" uid="uid://c2kou1pukxyi1" path="res://icon.svg" id="10_o8dyn"]
 [ext_resource type="AudioStream" uid="uid://7we2ma1yd81n" path="res://assets/music/lv1_beach.ogg" id="12_uje8k"]
+[ext_resource type="Script" path="res://scripts/whalepath.gd" id="13_salhk"]
+[ext_resource type="PackedScene" uid="uid://6g6r5f0de068" path="res://scenes/platforms/whale.tscn" id="14_6a2pp"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_457nn"]
 noise_type = 2
@@ -35,6 +37,12 @@ shader_parameter/wave_strength = 2.0
 shader_parameter/fade_start = 0.2
 shader_parameter/fade_end = 0.8
 shader_parameter/fast_noise = SubResource("NoiseTexture2D_putd4")
+
+[sub_resource type="Curve2D" id="Curve2D_a7vwt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -2911, 1322, -76, -8, 76, 8, -659, 1198)
+}
+point_count = 2
 
 [node name="level_1" type="Node"]
 script = ExtResource("1_kd0sr")
@@ -154,3 +162,14 @@ z_index = -9
 position = Vector2(3991, 243)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_1sk5l")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-8, 8)
+curve = SubResource("Curve2D_a7vwt")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-2911, 1322)
+rotation = -0.0550066
+script = ExtResource("13_salhk")
+
+[node name="StaticBody2D" parent="Path2D/PathFollow2D" instance=ExtResource("14_6a2pp")]
