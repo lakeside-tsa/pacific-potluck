@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg4bhba037y5s"]
+
+[ext_resource type="Texture2D" uid="uid://32eoqu5bsdwa" path="res://assets/Tilemap/B-Fixes-tilemap.png" id="1_suey4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_voitl"]
+size = Vector2(48, 5)
+
+[node name="cp1" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_suey4")
+region_enabled = true
+region_rect = Rect2(15.6529, 144.079, 48.1312, 4.92262)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_voitl")
+one_way_collision = true

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://otj51a7nu7o8"]
+
+[ext_resource type="Texture2D" uid="uid://l3lygwu2e37q" path="res://assets/Tilemap/Beach-tilemap.png" id="1_elgqy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_voitl"]
+size = Vector2(48, 6)
+
+[node name="sp1" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_elgqy")
+region_enabled = true
+region_rect = Rect2(143.987, 96.0097, 48.0302, 6.24039)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_voitl")
+one_way_collision = true
