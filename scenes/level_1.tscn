@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=16 format=3 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
@@ -7,10 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://scenes/beach-ld.tscn" id="5_8bxnv"]
 [ext_resource type="PackedScene" uid="uid://btljl67540cjj" path="res://scenes/ing2.tscn" id="6_ja8px"]
 [ext_resource type="PackedScene" uid="uid://dlqw8nxlq3gwy" path="res://scenes/ing3.tscn" id="7_0bpqi"]
-[ext_resource type="PackedScene" uid="uid://basux2eokdr82" path="res://scenes/p3_duck.tscn" id="7_oifxl"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="7_rubto"]
 [ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="8_1sk5l"]
-[ext_resource type="PackedScene" uid="uid://cuvibxi7nrl5g" path="res://scenes/p4_duck.tscn" id="8_bkma5"]
 [ext_resource type="Shader" path="res://shaders/water.gdshader" id="9_bhve8"]
 [ext_resource type="Texture2D" uid="uid://c2kou1pukxyi1" path="res://icon.svg" id="10_o8dyn"]
 [ext_resource type="AudioStream" uid="uid://7we2ma1yd81n" path="res://assets/music/lv1_beach.ogg" id="12_uje8k"]
@@ -61,16 +59,59 @@ text = "Level 1"
 
 [node name="Ingredients" type="Node" parent="."]
 
-[node name="ing1" parent="Ingredients" instance=ExtResource("3_ahxml")]
-position = Vector2(368, 462)
+[node name="Crate" parent="Ingredients" instance=ExtResource("3_ahxml")]
+z_index = 1
+position = Vector2(1783, 1766)
 
-[node name="ing2" parent="Ingredients" instance=ExtResource("6_ja8px")]
-position = Vector2(631, 476)
+[node name="Crate2" parent="Ingredients" instance=ExtResource("3_ahxml")]
+z_index = 1
+position = Vector2(-34, 1774)
 
-[node name="ing3" parent="Ingredients" instance=ExtResource("7_0bpqi")]
-position = Vector2(-273, 364)
+[node name="Crate3" parent="Ingredients" instance=ExtResource("3_ahxml")]
+z_index = 1
+position = Vector2(-2330, 1764)
 
-[node name="Node2D" parent="." instance=ExtResource("5_8bxnv")]
+[node name="Seaweed" parent="Ingredients" instance=ExtResource("6_ja8px")]
+z_index = 1
+position = Vector2(456, 1572)
+
+[node name="Seaweed2" parent="Ingredients" instance=ExtResource("6_ja8px")]
+z_index = 1
+position = Vector2(-162, 1157)
+
+[node name="Seaweed3" parent="Ingredients" instance=ExtResource("6_ja8px")]
+z_index = 1
+position = Vector2(2337, 1715)
+
+[node name="Seaweed4" parent="Ingredients" instance=ExtResource("6_ja8px")]
+z_index = 1
+position = Vector2(-2914, 1766)
+
+[node name="Seaweed5" parent="Ingredients" instance=ExtResource("6_ja8px")]
+z_index = 1
+position = Vector2(-2042, 1411)
+
+[node name="Crab" parent="Ingredients" instance=ExtResource("7_0bpqi")]
+z_index = 1
+position = Vector2(-719, 478)
+
+[node name="Crab2" parent="Ingredients" instance=ExtResource("7_0bpqi")]
+z_index = 1
+position = Vector2(-2477, 286)
+
+[node name="Crab3" parent="Ingredients" instance=ExtResource("7_0bpqi")]
+z_index = 1
+position = Vector2(2331, 477)
+
+[node name="Crab4" parent="Ingredients" instance=ExtResource("7_0bpqi")]
+z_index = 1
+position = Vector2(1917, 934)
+
+[node name="Crab5" parent="Ingredients" instance=ExtResource("7_0bpqi")]
+z_index = 1
+position = Vector2(-1252, 1655)
+
+[node name="Level Design" parent="." instance=ExtResource("5_8bxnv")]
 position = Vector2(0, 409)
 
 [node name="SpawnPoint1" type="Marker2D" parent="."]
@@ -79,31 +120,13 @@ position = Vector2(-53, 443)
 [node name="SpawnPoint2" type="Marker2D" parent="."]
 position = Vector2(177, 436)
 
-[node name="Background" type="Sprite2D" parent="."]
-z_index = -9
-position = Vector2(-672, -59)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_1sk5l")
-
-[node name="p3_duck" parent="." instance=ExtResource("7_oifxl")]
-position = Vector2(634, 608)
-
-[node name="p4_duck" parent="." instance=ExtResource("8_bkma5")]
-position = Vector2(974, 608)
-
-[node name="p4_duck2" parent="." instance=ExtResource("8_bkma5")]
-position = Vector2(1083, 608)
-
-[node name="p3_duck2" parent="." instance=ExtResource("7_oifxl")]
-position = Vector2(-1318, 290)
-
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Shimmer" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_xah76")
-position = Vector2(-106.5, 1318)
-scale = Vector2(48.3984, 7.78125)
+position = Vector2(-106.5, 1631.5)
+scale = Vector2(48.3984, 13.2891)
 texture = ExtResource("10_o8dyn")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Icon"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Shimmer"]
 position = Vector2(-0.371918, 1.28514)
 scale = Vector2(6.4124, 6.66988)
 
@@ -111,3 +134,23 @@ scale = Vector2(6.4124, 6.66988)
 stream = ExtResource("12_uje8k")
 volume_db = -6.0
 autoplay = true
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -9
+position = Vector2(536, 243)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_1sk5l")
+
+[node name="Background2" type="Sprite2D" parent="Background"]
+z_index = -9
+position = Vector2(-2915, 243)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_1sk5l")
+
+[node name="Background3" type="Sprite2D" parent="Background"]
+z_index = -9
+position = Vector2(3991, 243)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_1sk5l")

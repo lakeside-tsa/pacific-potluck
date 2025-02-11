@@ -74,6 +74,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/rmsm
 folder_colors={
 "res://abel_portraits/": "purple",
 "res://assets/": "red",
+"res://dialog/": "orange",
 "res://scenes/": "blue"
 }
 
