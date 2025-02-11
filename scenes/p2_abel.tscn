@@ -218,3 +218,6 @@ shape = SubResource("CapsuleShape2D_a6lvy")
 
 [node name="P2Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_tnmrg")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 3
