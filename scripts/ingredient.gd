@@ -11,7 +11,7 @@ func _on_body_entered(_body: Node2D) -> void:
 	ingredient_manager.add_ing(ingredient_number)
 	collision_mask = 0
 	hide()
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(10.0).timeout
 	show()
 	collision_mask = collision_original
 

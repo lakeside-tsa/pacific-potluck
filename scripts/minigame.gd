@@ -101,6 +101,6 @@ func cooking_stop():
 
 	score_label.text = str(Global.score)
 
-	if Global.score >= 15 :
+	if Global.score >= 20 :
 		level_completed_flag = true
 		emit_signal("level_completed")
