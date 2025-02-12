@@ -1,10 +1,12 @@
-[gd_scene load_steps=20 format=3 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=24 format=3 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
+[ext_resource type="Texture2D" uid="uid://dwtb3fdxloe1a" path="res://assets/Sign.png" id="2_ekjwa"]
 [ext_resource type="PackedScene" uid="uid://cv66ab71crrxd" path="res://scenes/overlay.tscn" id="2_ptpf1"]
 [ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/ing1.tscn" id="3_ahxml"]
 [ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://scenes/beach-ld.tscn" id="5_8bxnv"]
+[ext_resource type="FontFile" uid="uid://dsqwije2j027h" path="res://assets/Other/Peaberry Base/Peaberry-Base.otf" id="6_c0ed7"]
 [ext_resource type="PackedScene" uid="uid://btljl67540cjj" path="res://scenes/ing2.tscn" id="6_ja8px"]
 [ext_resource type="PackedScene" uid="uid://dlqw8nxlq3gwy" path="res://scenes/ing3.tscn" id="7_0bpqi"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="7_rubto"]
@@ -45,8 +47,25 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qahy4"]
+normal = Vector2(1, 0)
+distance = 267.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_muolu"]
+normal = Vector2(-1, 0)
+distance = -36.0
+
 [node name="level_1" type="Node"]
 script = ExtResource("1_kd0sr")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(-26, 398)
+scale = Vector2(5.125, 3.07813)
+texture = ExtResource("2_ekjwa")
 
 [node name="OverlayScene" parent="." instance=ExtResource("2_ptpf1")]
 
@@ -60,11 +79,14 @@ unique_name_in_owner = true
 script = ExtResource("1_sy0kq")
 
 [node name="IngCounter" type="Label" parent="IngredientManager"]
+texture_filter = 1
 offset_left = -82.0
 offset_top = 378.0
 offset_right = 211.0
 offset_bottom = 408.0
-text = "Level 1"
+theme_override_fonts/font = ExtResource("6_c0ed7")
+text = "The
+Beach"
 
 [node name="Ingredients" type="Node" parent="."]
 
@@ -164,22 +186,34 @@ position = Vector2(3991, 243)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_1sk5l")
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="Whale" type="Path2D" parent="."]
 position = Vector2(-8, 8)
 curve = SubResource("Curve2D_a7vwt")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="Whale"]
 position = Vector2(-2911, 1322)
 rotation = -0.0550066
 script = ExtResource("13_salhk")
 
-[node name="StaticBody2D" parent="Path2D/PathFollow2D" instance=ExtResource("14_6a2pp")]
+[node name="StaticBody2D" parent="Whale/PathFollow2D" instance=ExtResource("14_6a2pp")]
 
-[node name="Node" type="Node" parent="."]
+[node name="No arrow" type="Node" parent="."]
 
-[node name="DialogicNode_NextIndicator" type="Control" parent="Node"]
+[node name="DialogicNode_NextIndicator" type="Control" parent="No arrow"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("15_lhnwo")
+
+[node name="Boundaries" type="Node2D" parent="."]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Boundaries"]
+
+[node name="Leftt" type="CollisionShape2D" parent="Boundaries/RigidBody2D"]
+position = Vector2(-3422, 634)
+shape = SubResource("WorldBoundaryShape2D_qahy4")
+
+[node name="Right" type="CollisionShape2D" parent="Boundaries/RigidBody2D"]
+position = Vector2(2889, 1255)
+shape = SubResource("WorldBoundaryShape2D_muolu")
