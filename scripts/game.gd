@@ -9,7 +9,7 @@ static var cam_bot = [
 	1900, # lv1
 	1900, # lv2
 	10000, # lv3
-	10000, # lv4
+	100001, # lv4
 ]
 
 static var cam_left = [
