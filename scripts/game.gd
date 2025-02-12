@@ -4,6 +4,37 @@ extends Node
 #signal level_loaded(level, spawn_point1, spawn_point2)
 signal level_completed
 
+static var cam_bot = [
+	   0, # lv0
+	1900, # lv1
+	1900, # lv2
+	10000, # lv3
+	10000, # lv4
+]
+
+static var cam_left = [
+	   0, # lv0
+	-3140, # lv1
+	-100, # lv2
+	-10000, # lv3
+	-10000, # lv4
+]
+
+static var cam_right = [
+	  0, # lv0
+	2930, # lv1
+	100, # lv2
+	10000, # lv3
+	10000, # lv411
+]
+
+
+#enum CAM_LT {}
+#enum CAM_RT {}
+
+@onready var cam1 = $Splitscreen/CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport1/Camera1
+@onready var cam2 = $Splitscreen/CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport2/Camera2
+
 @onready var viewport1 = $Splitscreen/CanvasLayer/HBoxContainer/SubViewportContainer1/SubViewport1
 @onready var viewport2 = $Splitscreen/CanvasLayer/HBoxContainer/SubViewportContainer2/SubViewport2
 @onready var subviewportcontainer2 = $Splitscreen/CanvasLayer/HBoxContainer/SubViewportContainer2
@@ -52,8 +83,16 @@ func load_level(level_number: int):
 	viewport1.get_node("Camera1").target = player1
 	viewport2.get_node("Camera2").target = player2
 
+	cam1.limit_bottom = cam_bot[level_number]
+	cam2.limit_bottom = cam_bot[level_number]
+	cam1.limit_right = cam_right[level_number]
+	cam2.limit_right = cam_right[level_number]
+	cam1.limit_left = cam_left[level_number]
+	cam2.limit_left = cam_left[level_number]
+
 	var cauldron_node = current_level_node.find_child("Cauldron")
 	cauldron_node.connect("level_completed", Callable(self, "_on_level_completed"))
+
 
 
 func _on_level_completed():
