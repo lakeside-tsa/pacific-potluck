@@ -38,7 +38,7 @@ var texture_rect: TextureRect
 var tween: Tween
 
 func _ready() -> void:
-	add_to_group('dialogic_next_indicator')
+	#add_to_group('dialogic_next_indicator')
 
 	# Creating TextureRect if missing
 	if not texture_rect:
