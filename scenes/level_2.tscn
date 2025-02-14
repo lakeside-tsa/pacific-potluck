@@ -1,13 +1,63 @@
-[gd_scene load_steps=6 format=3 uid="uid://chlf4c3k7lkpu"]
+[gd_scene load_steps=10 format=3 uid="uid://chlf4c3k7lkpu"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_n2lda"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="2_708p1"]
 [ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="3_xfbd6"]
 [ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/ing1.tscn" id="4_pww5x"]
 [ext_resource type="PackedScene" uid="uid://voi0xotkv1mc" path="res://scenes/jungle_ld.tscn" id="6_5nbbi"]
+[ext_resource type="Texture2D" uid="uid://b1mg8rcwr4jix" path="res://assets/Ocean/nature-background.png" id="6_mhe4c"]
+
+[sub_resource type="Environment" id="Environment_6qi21"]
+background_mode = 3
+tonemap_mode = 2
+tonemap_white = 3.29
+fog_light_energy = 4.1
+adjustment_enabled = true
+adjustment_brightness = 1.09
+adjustment_saturation = 0.6
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ydoay"]
+normal = Vector2(1, 0)
+distance = -55.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_q3lnl"]
+normal = Vector2(-1, 0)
 
 [node name="level_2" type="Node"]
 script = ExtResource("1_n2lda")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Background"]
+environment = SubResource("Environment_6qi21")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+z_index = -3
+position = Vector2(34, -101)
+scale = Vector2(3, 3)
+texture = ExtResource("6_mhe4c")
+region_enabled = true
+region_rect = Rect2(37.0373, 114.819, 1724.71, 967.175)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background"]
+z_index = -3
+position = Vector2(5204, -101)
+scale = Vector2(3, 3)
+texture = ExtResource("6_mhe4c")
+region_enabled = true
+region_rect = Rect2(37.0373, 114.819, 1724.71, 967.175)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background"]
+z_index = -3
+position = Vector2(-5138, -101)
+scale = Vector2(3, 3)
+texture = ExtResource("6_mhe4c")
+region_enabled = true
+region_rect = Rect2(37.0373, 114.819, 1724.71, 967.175)
+
+[node name="Jungle-ld" parent="." instance=ExtResource("6_5nbbi")]
+z_index = -1
+position = Vector2(-4969, -9207)
 
 [node name="Cauldron" parent="." instance=ExtResource("2_708p1")]
 z_index = 1
@@ -44,7 +94,12 @@ position = Vector2(2078, 1202)
 [node name="SpawnPoint2" type="Marker2D" parent="."]
 position = Vector2(2305, 1201)
 
-[node name="Jungle-ld" parent="." instance=ExtResource("6_5nbbi")]
-position = Vector2(-4969, -9207)
+[node name="Boundaries" type="StaticBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(-4090, 1132)
+shape = SubResource("WorldBoundaryShape2D_ydoay")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundaries"]
+position = Vector2(4631, 1225)
+shape = SubResource("WorldBoundaryShape2D_q3lnl")

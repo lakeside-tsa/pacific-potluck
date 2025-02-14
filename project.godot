@@ -73,9 +73,10 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/rmsm
 
 folder_colors={
 "res://abel_portraits/": "purple",
-"res://assets/": "red",
+"res://assets/": "pink",
 "res://dialog/": "orange",
-"res://scenes/": "blue"
+"res://scenes/": "blue",
+"res://scripts/": "green"
 }
 
 [gui]
@@ -156,5 +157,3 @@ key_plus={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"

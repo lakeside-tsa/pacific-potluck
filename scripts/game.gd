@@ -7,7 +7,7 @@ signal level_completed
 static var cam_bot = [
 	   0, # lv0
 	1900, # lv1
-	1900, # lv2
+	1470, # lv2
 	10000, # lv3
 	100001, # lv4
 ]
@@ -15,7 +15,7 @@ static var cam_bot = [
 static var cam_left = [
 	   0, # lv0
 	-3140, # lv1
-	-100, # lv2
+	-4140, # lv2
 	-10000, # lv3
 	-10000, # lv4
 ]
@@ -23,7 +23,7 @@ static var cam_left = [
 static var cam_right = [
 	  0, # lv0
 	2930, # lv1
-	100, # lv2
+	4620, # lv2
 	10000, # lv3
 	10000, # lv411
 ]
