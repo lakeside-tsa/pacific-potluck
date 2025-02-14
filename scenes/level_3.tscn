@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cq72pghotmhso"]
 
-[ext_resource type="Script" path="res://scripts/level_3.gd" id="1_rmnfo"]
+[ext_resource type="Script" uid="uid://1xyn2gye1l26" path="res://scripts/level_3.gd" id="1_rmnfo"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="2_cs4jk"]
-[ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="3_2myjw"]
+[ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://scripts/ingredient_manager.gd" id="3_2myjw"]
 [ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/ing1.tscn" id="4_at45n"]
 [ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://scenes/beach-ld.tscn" id="5_01lx3"]
 [ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="6_ju6tm"]

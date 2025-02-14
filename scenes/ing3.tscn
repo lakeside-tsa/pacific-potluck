@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlqw8nxlq3gwy"]
 
-[ext_resource type="Script" path="res://scripts/ingredient.gd" id="1_yhpi0"]
+[ext_resource type="Script" uid="uid://c7tm7dsdy8e45" path="res://scripts/ingredient.gd" id="1_yhpi0"]
 [ext_resource type="Texture2D" uid="uid://cbjj6rrigdhqf" path="res://assets/Ingredients/Crab.png" id="2_bxtuu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydtyn"]

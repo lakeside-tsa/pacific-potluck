@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4vccsaskxygi"]
 
-[ext_resource type="Script" path="res://scripts/ingredient.gd" id="1_s18x4"]
+[ext_resource type="Script" uid="uid://c7tm7dsdy8e45" path="res://scripts/ingredient.gd" id="1_s18x4"]
 [ext_resource type="Texture2D" uid="uid://bhdeq58dghxq4" path="res://assets/Food/un-ing/crate.png" id="2_eqqyp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydtyn"]

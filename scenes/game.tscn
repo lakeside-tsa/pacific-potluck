@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://cgbyrfskejfog"]
 
-[ext_resource type="Script" path="res://scripts/splitscreen.gd" id="1_e0shh"]
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_gnrjp"]
-[ext_resource type="Script" path="res://scripts/camera_1.gd" id="1_ol4fa"]
-[ext_resource type="Script" path="res://scripts/canvaslayer.gd" id="2_hsxpx"]
-[ext_resource type="Script" path="res://scripts/camera_2.gd" id="4_1x333"]
+[ext_resource type="Script" uid="uid://ddkv7ahv2r07t" path="res://scripts/splitscreen.gd" id="1_e0shh"]
+[ext_resource type="Script" uid="uid://l7eqwyhghkmm" path="res://scripts/game.gd" id="1_gnrjp"]
+[ext_resource type="Script" uid="uid://caq3jitipqv6b" path="res://scripts/camera_1.gd" id="1_ol4fa"]
+[ext_resource type="Script" uid="uid://bdusnje0f81r8" path="res://scripts/canvaslayer.gd" id="2_hsxpx"]
+[ext_resource type="Script" uid="uid://btxicqyeaxyvv" path="res://scripts/camera_2.gd" id="4_1x333"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_gnrjp")

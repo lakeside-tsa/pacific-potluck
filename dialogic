@@ -1,0 +1,7 @@
+{
+	"disabled_build_options": {
+		"module_text_server_fb_enabled": true
+	},
+	"disabled_classes": [],
+	"type": "build_profile"
+}

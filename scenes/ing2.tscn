@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://btljl67540cjj"]
 
-[ext_resource type="Script" path="res://scripts/ingredient.gd" id="1_hlwcb"]
+[ext_resource type="Script" uid="uid://c7tm7dsdy8e45" path="res://scripts/ingredient.gd" id="1_hlwcb"]
 [ext_resource type="Texture2D" uid="uid://byyg3r0dbr1jm" path="res://assets/Ingredients/Seaweed.png" id="2_0ews5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ydtyn"]

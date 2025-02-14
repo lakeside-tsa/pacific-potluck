@@ -1,22 +1,22 @@
 {
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
-"_translation_id": "",
-"color": Color(0.801666, 0.838239, 0.941406, 1),
-"custom_info": {
+&"_translation_id": "",
+&"color": Color(0.801666, 0.838239, 0.941406, 1),
+&"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
 "style": "visnov",
 "suffix": ""
 },
-"default_portrait": "abelNeutral",
-"description": "testing",
-"display_name": "Abel Lee",
-"mirror": false,
-"nicknames": ["???"],
-"offset": Vector2(0, 0),
-"portraits": {
+&"default_portrait": "abelNeutral",
+&"description": "testing",
+&"display_name": "Abel Lee",
+&"mirror": false,
+&"nicknames": ["???"],
+&"offset": Vector2(0, 0),
+&"portraits": {
 "abelNeutral": {
 "export_overrides": {
 "image": "\"res://dialog/abel_portraits/abel_portrait_1.tres\""
@@ -27,5 +27,5 @@
 "scene": ""
 }
 },
-"scale": 1.5
+&"scale": 1.5
 }

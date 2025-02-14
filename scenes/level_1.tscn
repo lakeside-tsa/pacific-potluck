@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://bjmsqj0xkjmlr"]
 
-[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_kd0sr"]
-[ext_resource type="Script" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
+[ext_resource type="Script" uid="uid://bq11sctgoshy4" path="res://scripts/level_1.gd" id="1_kd0sr"]
+[ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
 [ext_resource type="Texture2D" uid="uid://dwtb3fdxloe1a" path="res://assets/Sign.png" id="2_ekjwa"]
 [ext_resource type="PackedScene" uid="uid://cv66ab71crrxd" path="res://scenes/overlay.tscn" id="2_ptpf1"]
 [ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/ing1.tscn" id="3_ahxml"]
@@ -11,12 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://dlqw8nxlq3gwy" path="res://scenes/ing3.tscn" id="7_0bpqi"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="7_rubto"]
 [ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="8_1sk5l"]
-[ext_resource type="Shader" path="res://shaders/water.gdshader" id="9_bhve8"]
+[ext_resource type="Shader" uid="uid://bt6exfb87rxjq" path="res://shaders/water.gdshader" id="9_bhve8"]
 [ext_resource type="Texture2D" uid="uid://c2kou1pukxyi1" path="res://icon.svg" id="10_o8dyn"]
 [ext_resource type="AudioStream" uid="uid://7we2ma1yd81n" path="res://assets/music/lv1_beach.ogg" id="12_uje8k"]
-[ext_resource type="Script" path="res://scripts/whalepath.gd" id="13_salhk"]
+[ext_resource type="Script" uid="uid://bwjjjr15eyev4" path="res://scripts/whalepath.gd" id="13_salhk"]
 [ext_resource type="PackedScene" uid="uid://6g6r5f0de068" path="res://scenes/platforms/whale.tscn" id="14_6a2pp"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="15_lhnwo"]
+[ext_resource type="Script" uid="uid://glnciqtmamif" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="15_lhnwo"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_457nn"]
 noise_type = 2
@@ -35,11 +35,11 @@ noise = SubResource("FastNoiseLite_457nn")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xah76"]
 shader = ExtResource("9_bhve8")
 shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/fast_noise = SubResource("NoiseTexture2D_putd4")
 shader_parameter/speed = Vector2(0.02, 0.05)
 shader_parameter/wave_strength = 2.0
 shader_parameter/fade_start = 0.2
 shader_parameter/fade_end = 0.8
-shader_parameter/fast_noise = SubResource("NoiseTexture2D_putd4")
 
 [sub_resource type="Curve2D" id="Curve2D_a7vwt"]
 _data = {
