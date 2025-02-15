@@ -14,10 +14,7 @@ config/name="pacific-potluck"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
-
-[audio]
-
-general/default_playback_type=1
+boot_splash/stretch/scale=0.7
 
 [autoload]
 
@@ -155,13 +152,8 @@ key_plus={
 ]
 }
 
-[memory]
-
-limits/message_queue/max_size_mb=64
-
 [physics]
 
-2d/physics_engine="GodotPhysics2D"
 2d/default_gravity=900.0
 
 [rendering]
