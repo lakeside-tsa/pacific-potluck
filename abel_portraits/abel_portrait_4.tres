@@ -1,7 +1,7 @@
 [gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c544y7symu2ow"]
 
-[ext_resource type="Texture2D" uid="uid://7fxhw8qrl35y" path="res://dialog/abel_portrait_sheet.tres" id="1_omnnm"]
+[ext_resource type="Texture2D" uid="uid://ueo8ulr10ms3" path="res://abel_portraits/abel_portraits.tres" id="1_7hocd"]
 
 [resource]
-atlas = ExtResource("1_omnnm")
-region = Rect2(0, 0, 212, 272)
+atlas = ExtResource("1_7hocd")
+region = Rect2(8, 0, 200, 264)

@@ -121,7 +121,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aha6t"]
-size = Vector2(20, 56)
+size = Vector2(20, 55)
 
 [node name="p2_Abel" type="CharacterBody2D"]
 z_index = 10
@@ -136,11 +136,10 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_23xwa")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.927777
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-position = Vector2(1, 1)
+position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_aha6t")
 
 [node name="P2Jump" type="AudioStreamPlayer" parent="."]

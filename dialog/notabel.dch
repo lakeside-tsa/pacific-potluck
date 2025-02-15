@@ -1,0 +1,31 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "visnov",
+"suffix": ""
+},
+&"default_portrait": "notabel",
+&"description": "Person who is not Abel",
+&"display_name": "???",
+&"mirror": false,
+&"nicknames": ["Not Abel Lee"],
+&"offset": Vector2(50, -310),
+&"portraits": {
+"notabel": {
+"export_overrides": {
+"image": "\"res://abel_portraits/notabel.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 0.6
+}

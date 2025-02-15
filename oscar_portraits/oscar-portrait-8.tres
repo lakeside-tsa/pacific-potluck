@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://mb8siv53i0ek"]
+
+[ext_resource type="Texture2D" uid="uid://7cbilxtd716d" path="res://oscar_portraits/oscar_portraits.tres" id="1_j1oco"]
+
+[resource]
+atlas = ExtResource("1_j1oco")
+region = Rect2(1281, 0, 263, 288)

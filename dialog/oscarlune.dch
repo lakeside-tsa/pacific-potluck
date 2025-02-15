@@ -1,0 +1,94 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.904297, 0.427422, 0.427422, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "visnov",
+"suffix": ""
+},
+&"default_portrait": "oscarNeutral",
+&"description": "Oscar!",
+&"display_name": "Oscar Lune",
+&"mirror": false,
+&"nicknames": ["Wayne"],
+&"offset": Vector2(50, -310),
+&"portraits": {
+"oscarAngry": {
+"export_overrides": {
+"image": "\"res://oscar_portraits/oscar-portrait-7.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"oscarBeam": {
+"export_overrides": {
+"image": "\"res://oscar_portraits/oscar-portrait-8.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"oscarIll": {
+"export_overrides": {
+"image": "\"res://oscar_portraits/oscar-portrait-2.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"oscarNeutral": {
+"export_overrides": {
+"image": "\"res://oscar_portraits/oscar-portrait-3.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"oscarSad": {
+"export_overrides": {
+"image": "\"res://oscar_portraits/oscar-portrait-5.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"oscarSmile": {
+"export_overrides": {
+"image": "\"res://oscar_portraits/oscar-portrait-4.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"oscarSurprise": {
+"export_overrides": {
+"image": "\"res://oscar_portraits/oscar-portrait-6.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"oscarWhistle": {
+"export_overrides": {
+"image": "\"res://oscar_portraits/oscar-portrait-1.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 0.65
+}
