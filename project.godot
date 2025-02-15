@@ -14,13 +14,20 @@ config/name="pacific-potluck"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
-boot_splash/stretch/scale=0.7
+
+[audio]
+
+general/default_playback_type=1
 
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Global="*res://scripts/global.gd"
 Overlay="*res://scenes/overlay.tscn"
+
+[debug]
+
+settings/stdout/verbose_stdout=true
 
 [dialogic]
 
@@ -60,8 +67,6 @@ variables={}
 
 [display]
 
-window/size/viewport_width=1804
-window/size/viewport_height=900
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
@@ -82,6 +87,13 @@ folder_colors={
 [gui]
 
 theme/custom_font="res://assets/Other/Peaberry Base/Peaberry-Base.otf"
+
+[importer_defaults]
+
+texture={
+&"compress/mode": 2,
+&"mipmaps/generate": true
+}
 
 [input]
 
@@ -150,10 +162,17 @@ key_plus={
 ]
 }
 
+[memory]
+
+limits/message_queue/max_size_mb=64
+
 [physics]
 
+2d/physics_engine="GodotPhysics2D"
 2d/default_gravity=900.0
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
