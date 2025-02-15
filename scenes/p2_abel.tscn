@@ -120,32 +120,32 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6lvy"]
-radius = 11.0
-height = 54.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aha6t"]
+size = Vector2(20, 58)
 
 [node name="p2_Abel" type="CharacterBody2D"]
 z_index = 10
-texture_filter = 1
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_am0fs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3, 0)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_23xwa")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.068625
+frame_progress = 0.100715
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-position = Vector2(-1, 4)
-shape = SubResource("CapsuleShape2D_a6lvy")
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_aha6t")
 
 [node name="P2Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_tnmrg")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(-2, 30)
+position = Vector2(0, 30)
 collision_mask = 3

@@ -113,32 +113,32 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_udd6e"]
-radius = 9.0
-height = 52.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcb0u"]
+size = Vector2(20, 61)
 
 [node name="p1_Oscar" type="CharacterBody2D"]
 z_index = 10
-texture_filter = 1
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_w03m4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(3, 0)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_s018m")
-animation = &"idle"
+animation = &"run"
 autoplay = "idle"
-frame_progress = 0.523837
+frame_progress = 0.520093
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-position = Vector2(-3, 7)
-shape = SubResource("CapsuleShape2D_udd6e")
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_wcb0u")
 
 [node name="SoundJump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_cv3x8")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(-3, 30)
+position = Vector2(0, 27)
 collision_mask = 3
