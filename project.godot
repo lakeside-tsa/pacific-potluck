@@ -30,7 +30,6 @@ settings/stdout/verbose_stdout=true
 
 directories/dch_directory={
 "abellee": "res://dialog/abellee.dch",
-"evelyn-sprites/abellee": "res://assets/evelyn-sprites/abellee.dch",
 "notabel": "res://dialog/notabel.dch",
 "oscarlune": "res://dialog/oscarlune.dch"
 }
