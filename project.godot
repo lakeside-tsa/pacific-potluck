@@ -88,13 +88,6 @@ folder_colors={
 
 theme/custom_font="res://assets/Other/Peaberry Base/Peaberry-Base.otf"
 
-[importer_defaults]
-
-texture={
-&"compress/mode": 2,
-&"mipmaps/generate": true
-}
-
 [input]
 
 p1_left={
@@ -174,5 +167,3 @@ limits/message_queue/max_size_mb=64
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
