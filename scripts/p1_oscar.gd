@@ -51,9 +51,9 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	if velocity.x > 0:
+	if velocity.x < 0:
 		animated_sprite_2d.flip_h = false
-	elif velocity.x < 0:
+	elif velocity.x > 0:
 		animated_sprite_2d.flip_h = true
 
 	if is_on_floor():
