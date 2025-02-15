@@ -1,3 +1,12 @@
+join oscarlune (oscarAngry) right [animation="Fade In Up"]
+oscarlune: Oh no!
+update oscarlune (oscarSad)
+oscarlune: We've shipwrecked on an island!
+leave oscarlune
+join abellee (neutral) right [animation="Fade In Up"]
+abellee: We should go gather food and cook so we don't starve.
+abellee: Come on, I see some stuff that we could use over there.
+leave abellee
 Welcome to Pacific Potluck!\
 \
 (press space to continue)

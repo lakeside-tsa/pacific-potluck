@@ -109,3 +109,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		load_level(3)
 	elif event.is_action_pressed("num04"):
 		load_level(4)
+	elif current_level_number == 0 and event.is_action_pressed("ui_accept"):
+		load_level(1)

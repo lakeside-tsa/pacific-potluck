@@ -1,6 +1,8 @@
 [style name="visnov_default"]
-Hi Level 2 !
+join oscarlune (oscarNeutral) left [animation="Fade In"]
+oscarlune: Hi Level 2 !
+leave oscarlune
 join abellee right [animation="Fade In" z_index="1"]
-The Helicoprion was a species of prehistoric shark, famous for its hooked, circular jaw and peculiar physiology.
-It is currently unknown why it evolved to have this feature, which continues to puzzle archeologists, biologists, and other fields of study pertaining to the development of living things.
+abellee: The Helicoprion was a species of prehistoric shark, famous for its hooked, circular jaw and peculiar physiology.
+abellee: It is currently unknown why it evolved to have this feature, which continues to puzzle archeologists, biologists, and other fields of study pertaining to the development of living things.
 [end_timeline]

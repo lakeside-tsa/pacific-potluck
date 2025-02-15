@@ -7,15 +7,15 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "visnov",
+"style": "visnov_default",
 "suffix": ""
 },
 &"default_portrait": "neutral",
 &"description": "Abel!",
-&"display_name": "Abel Lee",
+&"display_name": "Abel",
 &"mirror": false,
 &"nicknames": ["???"],
-&"offset": Vector2(50, -310),
+&"offset": Vector2(0, 0),
 &"portraits": {
 "bashful": {
 "export_overrides": {
@@ -81,5 +81,5 @@
 "scene": ""
 }
 },
-&"scale": 0.6
+&"scale": 0.3
 }
