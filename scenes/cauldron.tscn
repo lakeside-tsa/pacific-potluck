@@ -51,7 +51,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_of4w3"]
-size = Vector2(159, 76.5)
+size = Vector2(266, 76.5)
 
 [sub_resource type="Curve2D" id="Curve2D_5h7gb"]
 _data = {
@@ -66,17 +66,18 @@ script = ExtResource("1_rkd12")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, 50)
-scale = Vector2(1.2, 1.2)
+position = Vector2(0, 45.2)
+scale = Vector2(1.35814, 1.32973)
 sprite_frames = SubResource("SpriteFrames_oekce")
 autoplay = "default"
 frame_progress = 0.0472162
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 53)
+position = Vector2(1, 53)
 shape = SubResource("RectangleShape2D_of4w3")
 
 [node name="Bar" type="Sprite2D" parent="."]
+position = Vector2(0, -45)
 scale = Vector2(2.5, 2)
 texture = ExtResource("1_jtskx")
 
@@ -95,13 +96,15 @@ centered = false
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = -71.0
-offset_top = -56.0
+offset_top = -110.0
 offset_right = 72.0
-offset_bottom = 8.0
+offset_bottom = -46.0
 theme_override_fonts/font = ExtResource("6_by3sa")
+theme_override_font_sizes/font_size = 26
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
