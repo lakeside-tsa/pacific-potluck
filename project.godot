@@ -87,6 +87,13 @@ folder_colors={
 
 theme/custom_font="res://assets/Other/Peaberry Base/Peaberry-Base.otf"
 
+[importer_defaults]
+
+texture={
+&"compress/mode": 4,
+&"detect_3d/compress_to": 0
+}
+
 [input]
 
 p1_left={
