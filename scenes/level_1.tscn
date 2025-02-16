@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=23 format=3 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" uid="uid://bq11sctgoshy4" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
@@ -16,7 +16,6 @@
 [ext_resource type="AudioStream" uid="uid://7we2ma1yd81n" path="res://assets/music/lv1_beach.ogg" id="12_uje8k"]
 [ext_resource type="Script" uid="uid://bwjjjr15eyev4" path="res://scripts/whalepath.gd" id="13_salhk"]
 [ext_resource type="PackedScene" uid="uid://6g6r5f0de068" path="res://scenes/whale.tscn" id="14_6a2pp"]
-[ext_resource type="Script" uid="uid://glnciqtmamif" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="15_lhnwo"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_457nn"]
 noise_type = 2
@@ -196,15 +195,6 @@ rotation = -0.0550066
 script = ExtResource("13_salhk")
 
 [node name="StaticBody2D" parent="Whale/PathFollow2D" instance=ExtResource("14_6a2pp")]
-
-[node name="No arrow" type="Node" parent="."]
-
-[node name="DialogicNode_NextIndicator" type="Control" parent="No arrow"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("15_lhnwo")
 
 [node name="Boundaries" type="Node2D" parent="."]
 
