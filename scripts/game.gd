@@ -66,6 +66,11 @@ func load_level(level_number: int):
 	if current_level_node:
 		current_level_node.queue_free()
 
+	if player1:
+		player1.queue_free()
+	if player2:
+		player2.queue_free()
+
 	subviewportcontainer2.show()
 
 	current_level_node = level_scene.instantiate()
