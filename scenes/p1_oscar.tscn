@@ -127,9 +127,8 @@ texture_filter = 1
 position = Vector2(3, 0)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_s018m")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.62759
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
