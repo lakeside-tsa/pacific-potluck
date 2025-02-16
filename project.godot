@@ -69,6 +69,10 @@ variables={}
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[editor]
+
+export/convert_text_resources_to_binary=false
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
