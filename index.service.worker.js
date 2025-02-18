@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1739851995|17098432';
+const CACHE_VERSION = '1739853987|17337028';
 /** @type {string} */
 const CACHE_PREFIX = 'pacific-potluck-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
