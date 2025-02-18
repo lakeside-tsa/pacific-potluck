@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b2pueq1q0iqkp" path="res://scripts/level_2.gd" id="1_n2lda"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="2_708p1"]
 [ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://scripts/ingredient_manager.gd" id="3_xfbd6"]
-[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/ing1.tscn" id="4_pww5x"]
+[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/lv1_ing1_sprite.tscn" id="4_pww5x"]
 [ext_resource type="PackedScene" uid="uid://voi0xotkv1mc" path="res://scenes/jungle_ld.tscn" id="6_5nbbi"]
 [ext_resource type="Texture2D" uid="uid://b1mg8rcwr4jix" path="res://assets/Ocean/nature-background.png" id="6_mhe4c"]
 

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://j3sxutqhveur"]
+
+[ext_resource type="Script" uid="uid://c7tm7dsdy8e45" path="res://scripts/ingredient.gd" id="1_6srau"]
+
+[node name="Area2D" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_6srau")

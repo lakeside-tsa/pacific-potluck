@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://btljl67540cjj"]
+
+[ext_resource type="Texture2D" uid="uid://byyg3r0dbr1jm" path="res://assets/Ingredients/Seaweed.png" id="2_0ews5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_36i68"]
+radius = 130.0
+
+[node name="ing2" type="Area2D"]
+scale = Vector2(0.1, 0.1)
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 5.96046e-07)
+texture = ExtResource("2_0ews5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_36i68")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

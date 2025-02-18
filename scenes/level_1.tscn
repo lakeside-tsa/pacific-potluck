@@ -1,21 +1,25 @@
-[gd_scene load_steps=23 format=3 uid="uid://bjmsqj0xkjmlr"]
+[gd_scene load_steps=26 format=3 uid="uid://bjmsqj0xkjmlr"]
 
 [ext_resource type="Script" uid="uid://bq11sctgoshy4" path="res://scripts/level_1.gd" id="1_kd0sr"]
 [ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://scripts/ingredient_manager.gd" id="1_sy0kq"]
 [ext_resource type="Texture2D" uid="uid://dwtb3fdxloe1a" path="res://assets/Sign.png" id="2_ekjwa"]
 [ext_resource type="PackedScene" uid="uid://cv66ab71crrxd" path="res://scenes/overlay.tscn" id="2_ptpf1"]
-[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/ing1.tscn" id="3_ahxml"]
+[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/lv1_ing1_sprite.tscn" id="3_ahxml"]
 [ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://scenes/beach-ld.tscn" id="5_8bxnv"]
 [ext_resource type="FontFile" uid="uid://dsqwije2j027h" path="res://assets/Other/Peaberry Base/Peaberry-Base.otf" id="6_c0ed7"]
-[ext_resource type="PackedScene" uid="uid://btljl67540cjj" path="res://scenes/ing2.tscn" id="6_ja8px"]
-[ext_resource type="PackedScene" uid="uid://dlqw8nxlq3gwy" path="res://scenes/ing3.tscn" id="7_0bpqi"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="7_rubto"]
 [ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="8_1sk5l"]
+[ext_resource type="Texture2D" uid="uid://byyg3r0dbr1jm" path="res://assets/Ingredients/Seaweed.png" id="9_2cbcq"]
 [ext_resource type="Shader" uid="uid://bt6exfb87rxjq" path="res://shaders/water.gdshader" id="9_bhve8"]
+[ext_resource type="Texture2D" uid="uid://cbjj6rrigdhqf" path="res://assets/Ingredients/Crab.png" id="10_2cbcq"]
 [ext_resource type="Texture2D" uid="uid://c2kou1pukxyi1" path="res://icon.svg" id="10_o8dyn"]
+[ext_resource type="Script" uid="uid://c7tm7dsdy8e45" path="res://scripts/ingredient.gd" id="10_x2xxo"]
+[ext_resource type="PackedScene" uid="uid://p2sk2yofect7" path="res://scenes/lv1_ing1_shape.tscn" id="11_2cbcq"]
 [ext_resource type="AudioStream" uid="uid://7we2ma1yd81n" path="res://assets/music/lv1_beach.ogg" id="12_uje8k"]
 [ext_resource type="Script" uid="uid://bwjjjr15eyev4" path="res://scripts/whalepath.gd" id="13_salhk"]
 [ext_resource type="PackedScene" uid="uid://6g6r5f0de068" path="res://scenes/whale.tscn" id="14_6a2pp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x2xxo"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_457nn"]
 noise_type = 2
@@ -89,57 +93,161 @@ Beach"
 
 [node name="Ingredients" type="Node" parent="."]
 
-[node name="Crate" parent="Ingredients" instance=ExtResource("3_ahxml")]
+[node name="ing2_sw1" type="Area2D" parent="Ingredients"]
 z_index = 1
-position = Vector2(1783, 1766)
+position = Vector2(2333, 1716)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 1
 
-[node name="Crate2" parent="Ingredients" instance=ExtResource("3_ahxml")]
-z_index = 1
-position = Vector2(-34, 1774)
+[node name="Sprite2D" parent="Ingredients/ing2_sw1" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_2cbcq")
 
-[node name="Crate3" parent="Ingredients" instance=ExtResource("3_ahxml")]
-z_index = 1
-position = Vector2(-2330, 1764)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sw1"]
+shape = SubResource("CircleShape2D_x2xxo")
 
-[node name="Seaweed" parent="Ingredients" instance=ExtResource("6_ja8px")]
+[node name="ing2_sw2" type="Area2D" parent="Ingredients"]
 z_index = 1
-position = Vector2(456, 1572)
+position = Vector2(1244, 1615)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 1
 
-[node name="Seaweed2" parent="Ingredients" instance=ExtResource("6_ja8px")]
-z_index = 1
-position = Vector2(-162, 1157)
+[node name="Sprite2D" parent="Ingredients/ing2_sw2" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_2cbcq")
 
-[node name="Seaweed3" parent="Ingredients" instance=ExtResource("6_ja8px")]
-z_index = 1
-position = Vector2(2337, 1715)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sw2"]
+shape = SubResource("CircleShape2D_x2xxo")
 
-[node name="Seaweed4" parent="Ingredients" instance=ExtResource("6_ja8px")]
+[node name="ing2_sw3" type="Area2D" parent="Ingredients"]
 z_index = 1
-position = Vector2(-2914, 1766)
+position = Vector2(-1253, 1648)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 1
 
-[node name="Seaweed5" parent="Ingredients" instance=ExtResource("6_ja8px")]
-z_index = 1
-position = Vector2(-2042, 1411)
+[node name="Sprite2D" parent="Ingredients/ing2_sw3" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_2cbcq")
 
-[node name="Crab" parent="Ingredients" instance=ExtResource("7_0bpqi")]
-z_index = 1
-position = Vector2(-719, 478)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sw3"]
+shape = SubResource("CircleShape2D_x2xxo")
 
-[node name="Crab2" parent="Ingredients" instance=ExtResource("7_0bpqi")]
+[node name="ing2_sw4" type="Area2D" parent="Ingredients"]
 z_index = 1
-position = Vector2(-2477, 286)
+position = Vector2(-2901, 1760)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 1
 
-[node name="Crab3" parent="Ingredients" instance=ExtResource("7_0bpqi")]
-z_index = 1
-position = Vector2(2331, 477)
+[node name="Sprite2D" parent="Ingredients/ing2_sw4" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_2cbcq")
 
-[node name="Crab4" parent="Ingredients" instance=ExtResource("7_0bpqi")]
-z_index = 1
-position = Vector2(1917, 934)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sw4"]
+shape = SubResource("CircleShape2D_x2xxo")
 
-[node name="Crab5" parent="Ingredients" instance=ExtResource("7_0bpqi")]
+[node name="ing2_sw5" type="Area2D" parent="Ingredients"]
 z_index = 1
-position = Vector2(-1252, 1655)
+position = Vector2(-2901, 1760)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 1
+
+[node name="Sprite2D" parent="Ingredients/ing2_sw5" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sw5"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing3_c1" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-1943, 1558)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 2
+
+[node name="Sprite2D" parent="Ingredients/ing3_c1" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_c1"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing3_c2" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-121, 1170)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 2
+
+[node name="Sprite2D" parent="Ingredients/ing3_c2" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_c2"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing3_c3" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(692, 1552)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 2
+
+[node name="Sprite2D" parent="Ingredients/ing3_c3" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_c3"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing3_c4" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(2407, 1443)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+ingredient_number = 2
+
+[node name="Sprite2D" parent="Ingredients/ing3_c4" instance=ExtResource("3_ahxml")]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_2cbcq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_c4"]
+shape = SubResource("CircleShape2D_x2xxo")
+
+[node name="ing1_crate1" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(1953, 1766)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+
+[node name="Sprite2D" parent="Ingredients/ing1_crate1" instance=ExtResource("3_ahxml")]
+
+[node name="CollisionShape2D" parent="Ingredients/ing1_crate1" instance=ExtResource("11_2cbcq")]
+
+[node name="ing1_crate2" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-51, 1763)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+
+[node name="Sprite2D" parent="Ingredients/ing1_crate2" instance=ExtResource("3_ahxml")]
+
+[node name="CollisionShape2D" parent="Ingredients/ing1_crate2" instance=ExtResource("11_2cbcq")]
+
+[node name="ing1_crate3" type="Area2D" parent="Ingredients"]
+z_index = 1
+position = Vector2(-929, 1766)
+collision_mask = 2
+script = ExtResource("10_x2xxo")
+
+[node name="Sprite2D" parent="Ingredients/ing1_crate3" instance=ExtResource("3_ahxml")]
+
+[node name="CollisionShape2D" parent="Ingredients/ing1_crate3" instance=ExtResource("11_2cbcq")]
 
 [node name="Level Design" parent="." instance=ExtResource("5_8bxnv")]
 position = Vector2(0, 409)
