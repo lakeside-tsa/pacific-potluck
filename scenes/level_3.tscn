@@ -1,13 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://cq72pghotmhso"]
+[gd_scene load_steps=12 format=3 uid="uid://cq72pghotmhso"]
 
 [ext_resource type="Script" uid="uid://1xyn2gye1l26" path="res://scripts/level_3.gd" id="1_rmnfo"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="2_cs4jk"]
 [ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://scripts/ingredient_manager.gd" id="3_2myjw"]
-[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/lv1_ing1_sprite.tscn" id="4_at45n"]
-[ext_resource type="PackedScene" uid="uid://0d0dwfveupt1" path="res://scenes/beach-ld.tscn" id="5_01lx3"]
-[ext_resource type="Texture2D" uid="uid://bkputnynd6c62" path="res://assets/Ocean/Ocean_2/5.png" id="6_ju6tm"]
-[ext_resource type="PackedScene" uid="uid://basux2eokdr82" path="res://scenes/p3_duck.tscn" id="7_jmewl"]
-[ext_resource type="PackedScene" uid="uid://cuvibxi7nrl5g" path="res://scenes/p4_duck.tscn" id="8_7fl28"]
+[ext_resource type="PackedScene" uid="uid://cgcu58u56yahe" path="res://scenes/desert_lv.tscn" id="4_1pn4d"]
+[ext_resource type="PackedScene" uid="uid://j3sxutqhveur" path="res://scenes/item_generic.tscn" id="4_wae8j"]
+[ext_resource type="Texture2D" uid="uid://yuq3yngrsl1e" path="res://assets/Food/un-ing/prickly-pear.png" id="5_ha73p"]
+[ext_resource type="Texture2D" uid="uid://cfadpnc1qjh3c" path="res://assets/Food/un-ing/sugarcane-stalks.png" id="6_vcx5n"]
+[ext_resource type="Texture2D" uid="uid://db4xq30wpq4f0" path="res://assets/Ingredients/Coconut.png" id="7_56dhn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ax3dk"]
+size = Vector2(37, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2dsb"]
+size = Vector2(20, 55)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p3r0x"]
 
 [node name="level_3" type="Node"]
 script = ExtResource("1_rmnfo")
@@ -30,40 +38,44 @@ text = "Level 3"
 
 [node name="Ingredients" type="Node" parent="."]
 
-[node name="Apple_ing1" parent="Ingredients" instance=ExtResource("4_at45n")]
-position = Vector2(817, 478)
-
-[node name="Apple_ing2" parent="Ingredients" instance=ExtResource("4_at45n")]
-position = Vector2(393, 379)
-ingredient_number = 1
-
-[node name="Apple_ing3" parent="Ingredients" instance=ExtResource("4_at45n")]
-position = Vector2(692, 525)
+[node name="ing3_p" parent="Ingredients" instance=ExtResource("4_wae8j")]
+position = Vector2(-155, 489)
 ingredient_number = 2
 
-[node name="Node2D" parent="." instance=ExtResource("5_01lx3")]
-position = Vector2(0, 409)
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing3_p"]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_ha73p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_p"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_ax3dk")
+
+[node name="ing2_sugar" parent="Ingredients" instance=ExtResource("4_wae8j")]
+position = Vector2(1019, 483)
+ingredient_number = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing2_sugar"]
+texture = ExtResource("6_vcx5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_sugar"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_q2dsb")
+
+[node name="ing1_cc" parent="Ingredients" instance=ExtResource("4_wae8j")]
+position = Vector2(638, 499)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing1_cc"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_56dhn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing1_cc"]
+shape = SubResource("CircleShape2D_p3r0x")
+
+[node name="Node2D" parent="." instance=ExtResource("4_1pn4d")]
+position = Vector2(-87, 383)
 
 [node name="SpawnPoint1" type="Marker2D" parent="."]
-position = Vector2(136, 35)
+position = Vector2(102, 428)
 
 [node name="SpawnPoint2" type="Marker2D" parent="."]
-position = Vector2(333, 55)
-
-[node name="Background" type="Sprite2D" parent="."]
-z_index = -9
-position = Vector2(135, 376)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("6_ju6tm")
-
-[node name="p3_duck" parent="." instance=ExtResource("7_jmewl")]
-position = Vector2(634, 608)
-
-[node name="p4_duck" parent="." instance=ExtResource("8_7fl28")]
-position = Vector2(974, 608)
-
-[node name="p4_duck2" parent="." instance=ExtResource("8_7fl28")]
-position = Vector2(1083, 608)
-
-[node name="p3_duck2" parent="." instance=ExtResource("7_jmewl")]
-position = Vector2(-1318, 290)
+position = Vector2(228, 425)

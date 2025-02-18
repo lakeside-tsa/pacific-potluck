@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://chlf4c3k7lkpu"]
+[gd_scene load_steps=16 format=3 uid="uid://chlf4c3k7lkpu"]
 
 [ext_resource type="Script" uid="uid://b2pueq1q0iqkp" path="res://scripts/level_2.gd" id="1_n2lda"]
 [ext_resource type="PackedScene" uid="uid://cewaah215cyps" path="res://scenes/cauldron.tscn" id="2_708p1"]
 [ext_resource type="Script" uid="uid://41kjvb635q6k" path="res://scripts/ingredient_manager.gd" id="3_xfbd6"]
-[ext_resource type="PackedScene" uid="uid://c4vccsaskxygi" path="res://scenes/lv1_ing1_sprite.tscn" id="4_pww5x"]
 [ext_resource type="PackedScene" uid="uid://voi0xotkv1mc" path="res://scenes/jungle_ld.tscn" id="6_5nbbi"]
 [ext_resource type="Texture2D" uid="uid://b1mg8rcwr4jix" path="res://assets/Ocean/nature-background.png" id="6_mhe4c"]
+[ext_resource type="PackedScene" uid="uid://j3sxutqhveur" path="res://scenes/item_generic.tscn" id="6_y0kc7"]
+[ext_resource type="Texture2D" uid="uid://cl3rt3flkx1gi" path="res://assets/Ingredients/Eggs.png" id="7_ne2mo"]
+[ext_resource type="Texture2D" uid="uid://dguboimggkeo" path="res://assets/Food/un-ing/un-rice.png" id="8_ne2mo"]
+[ext_resource type="Texture2D" uid="uid://c57vx0ccehxqy" path="res://assets/Ingredients/Pink Oyster Mushroom.png" id="9_6cvei"]
 
 [sub_resource type="Environment" id="Environment_6qi21"]
 background_mode = 3
@@ -15,6 +18,13 @@ fog_light_energy = 4.1
 adjustment_enabled = true
 adjustment_brightness = 1.09
 adjustment_saturation = 0.6
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6cvei"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_que50"]
+size = Vector2(37, 58)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_que50"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ydoay"]
 normal = Vector2(1, 0)
@@ -77,16 +87,125 @@ text = "Level 2"
 
 [node name="Ingredients" type="Node" parent="."]
 
-[node name="Apple_ing1" parent="Ingredients" instance=ExtResource("4_pww5x")]
-position = Vector2(817, 478)
-
-[node name="Apple_ing2" parent="Ingredients" instance=ExtResource("4_pww5x")]
-position = Vector2(393, 379)
+[node name="ing2_egg" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(1904, 910)
 ingredient_number = 1
 
-[node name="Apple_ing3" parent="Ingredients" instance=ExtResource("4_pww5x")]
-position = Vector2(692, 525)
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing2_egg"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_ne2mo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_egg"]
+shape = SubResource("CircleShape2D_6cvei")
+
+[node name="ing2_egg2" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(3235, 650)
+ingredient_number = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing2_egg2"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_ne2mo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_egg2"]
+shape = SubResource("CircleShape2D_6cvei")
+
+[node name="ing2_egg3" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(-624, 445)
+ingredient_number = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing2_egg3"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_ne2mo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_egg3"]
+shape = SubResource("CircleShape2D_6cvei")
+
+[node name="ing2_egg4" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(-3698, 1067)
+ingredient_number = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing2_egg4"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_ne2mo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing2_egg4"]
+shape = SubResource("CircleShape2D_6cvei")
+
+[node name="ing1_rice" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(804, 1296)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing1_rice"]
+texture = ExtResource("8_ne2mo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing1_rice"]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_que50")
+
+[node name="ing1_rice2" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(1171, 1297)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing1_rice2"]
+texture = ExtResource("8_ne2mo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing1_rice2"]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_que50")
+
+[node name="ing1_rice3" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(1471, 1296)
+rotation = -6.28319
+scale = Vector2(-1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing1_rice3"]
+texture = ExtResource("8_ne2mo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing1_rice3"]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_que50")
+
+[node name="ing3_shroom" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(-116, 973)
 ingredient_number = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing3_shroom"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("9_6cvei")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_shroom"]
+shape = SubResource("CircleShape2D_que50")
+
+[node name="ing3_shroom2" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(-2362, 1005)
+ingredient_number = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing3_shroom2"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("9_6cvei")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_shroom2"]
+shape = SubResource("CircleShape2D_que50")
+
+[node name="ing3_shroom3" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(3075, 726)
+ingredient_number = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing3_shroom3"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("9_6cvei")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_shroom3"]
+shape = SubResource("CircleShape2D_que50")
+
+[node name="ing3_shroom4" parent="Ingredients" instance=ExtResource("6_y0kc7")]
+position = Vector2(4302, 921)
+ingredient_number = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredients/ing3_shroom4"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("9_6cvei")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ingredients/ing3_shroom4"]
+shape = SubResource("CircleShape2D_que50")
 
 [node name="SpawnPoint1" type="Marker2D" parent="."]
 position = Vector2(2078, 1202)
